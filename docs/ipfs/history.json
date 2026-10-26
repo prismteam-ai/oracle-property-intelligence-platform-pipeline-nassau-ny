@@ -1,0 +1,130 @@
+{
+  "runs": [
+    {
+      "run_id": "ipfs-20261026T032236Z",
+      "generated_at": "2026-10-26T03:22:36Z",
+      "manifest_cid": "bafkreiejx3tod3xmksfno5gpsqs2kcibgitd4wrfah6z5rz7eti4g2yc6q",
+      "artifacts": {
+        "crm_properties": {
+          "cid": "bafybeibm4mimuy4miseibpylvi6rgrkaedlsyb7vr7sbjgtj5jqukqzpta",
+          "size": 22151554,
+          "row_count": 422304
+        },
+        "crm_permits": {
+          "cid": "bafkreibsz4fuppdn5fdxabyogghtcgubix4rz3qgev675wdemxwquzzg6u",
+          "size": 29461,
+          "row_count": 443
+        },
+        "properties": {
+          "cid": "bafybeigezbm2m7bi536yo55snhfx5iqoi3uja7zcnw3xinsp666bg25s3a",
+          "size": 33224299,
+          "row_count": 426460
+        },
+        "property_roof_age": {
+          "cid": "bafybeif2j5ixwnwerqdqwh4zr4xc3lzovz5gpefh6pmqfsl4kodyjf5jqm",
+          "size": 8965267,
+          "row_count": 426460
+        },
+        "roof_age_lineage": {
+          "cid": "bafybeicpigph4hkhqhaos6eznglbmfxe2p6bcyorkmsovzv77wkbu22fwy",
+          "size": 7092110,
+          "row_count": 395554
+        },
+        "ownership_signals": {
+          "cid": "bafybeic7nns2d5b27chavdvuj4p4e5mhdmfdht6l3jik5ddf5mh37qqkpy",
+          "size": 7347402,
+          "row_count": 450299
+        },
+        "etrakit_permit_facts": {
+          "cid": "bafkreia4lkjwvg3yryug4f2beetf46rynrholzhhmj255ouhxuvq2qybbi",
+          "size": 24115,
+          "row_count": 490
+        },
+        "etrakit_permit_property_link": {
+          "cid": "bafkreid3h7ze6orsoaloshagn4vsm5y6bfqoqhkb37pap7telumzdfllju",
+          "size": 4809,
+          "row_count": 443
+        },
+        "overture_places": {
+          "cid": "bafybeiaqwo4fjwjmqe7rwpq3dr5ufmauhxfdpfptw2xwy7svmv7ful5fuu",
+          "size": 8486457,
+          "row_count": 78054
+        },
+        "corporations": {
+          "cid": "bafybeibzexu7cbxzqmzpj45xpqoo6pknz5xflj2nnqiacdzjkuvoom5xpm",
+          "size": 28086054,
+          "row_count": 409304
+        },
+        "pipeline_runs": {
+          "cid": "bafkreiehxaagcvmehr5m22ryqxp4ffh6p23vc5ryuaapw3jhkyw3feybim",
+          "size": 14087,
+          "row_count": 12
+        }
+      },
+      "all_gating_gateways_ok": true
+    },
+    {
+      "run_id": "ipfs-20261026T152300Z",
+      "generated_at": "2026-10-26T15:23:00Z",
+      "manifest_cid": "bafkreibaghprubas2gbh6aieotgshggvdgywwmodzm3l5habdgyry565ae",
+      "artifacts": {
+        "crm_properties": {
+          "cid": "bafybeiblnvw522oyy2crcmkqixp44xtbh66toiggzm7myf6quydtmla5yu",
+          "size": 22150090,
+          "row_count": 422304
+        },
+        "crm_permits": {
+          "cid": "bafkreibjkh2oslqydbr32ytvzwuvd2tb2h66hgbvxqvpooivpqgh5f2ihq",
+          "size": 198510,
+          "row_count": 3986
+        },
+        "properties": {
+          "cid": "bafybeigezbm2m7bi536yo55snhfx5iqoi3uja7zcnw3xinsp666bg25s3a",
+          "size": 33224299,
+          "row_count": 426460
+        },
+        "property_roof_age": {
+          "cid": "bafybeifavdwiu4ihy3amudvicf4uaixvgo2pt44yunq5sasleidtblbale",
+          "size": 8968608,
+          "row_count": 426460
+        },
+        "roof_age_lineage": {
+          "cid": "bafybeicpigph4hkhqhaos6eznglbmfxe2p6bcyorkmsovzv77wkbu22fwy",
+          "size": 7092110,
+          "row_count": 395554
+        },
+        "ownership_signals": {
+          "cid": "bafybeic7nns2d5b27chavdvuj4p4e5mhdmfdht6l3jik5ddf5mh37qqkpy",
+          "size": 7347402,
+          "row_count": 450299
+        },
+        "etrakit_permit_facts": {
+          "cid": "bafkreiehxzgwggkqrmvqaljs42cn5uyctyu7a3zq6dfy6ssywyrgvli2em",
+          "size": 163860,
+          "row_count": 4561
+        },
+        "etrakit_permit_property_link": {
+          "cid": "bafkreicdxayep6s5uudoe7ad63htvmehrvvukmqt3mzl5le4mexwhe3y4u",
+          "size": 42803,
+          "row_count": 3986
+        },
+        "overture_places": {
+          "cid": "bafybeiaqwo4fjwjmqe7rwpq3dr5ufmauhxfdpfptw2xwy7svmv7ful5fuu",
+          "size": 8486457,
+          "row_count": 78054
+        },
+        "corporations": {
+          "cid": "bafybeibzexu7cbxzqmzpj45xpqoo6pknz5xflj2nnqiacdzjkuvoom5xpm",
+          "size": 28086054,
+          "row_count": 409304
+        },
+        "pipeline_runs": {
+          "cid": "bafkreiefaocl7anzcta6kjdyojfbk425hcgswb5gc7rkyn4tscgfquqcra",
+          "size": 14695,
+          "row_count": 15
+        }
+      },
+      "all_gating_gateways_ok": true
+    }
+  ]
+}

@@ -1,5 +1,16 @@
 # Oracle Property Intelligence Platform Pipeline - Nassau County, NY
 
+## Published artifacts (live on public IPFS)
+
+Latest run: `ipfs-20261026T152300Z`, manifest CID `bafkreibaghprubas2gbh6aieotgshggvdgywwmodzm3l5habdgyry565ae`.
+
+- Full manifest and gateway-verification results: `docs/ipfs/manifest-ipfs-20261026T152300Z.json`, `docs/ipfs/verification-ipfs-20261026T152300Z.json`
+- Human-readable summary, reproduce steps, and the gateway-independence write-up: `docs/ipfs-publish.md`
+- Verify any artifact yourself, e.g. the properties table the CRM consumes:
+  `https://gateway.pinata.cloud/ipfs/bafybeiblnvw522oyy2crcmkqixp44xtbh66toiggzm7myf6quydtmla5yu`
+- Consumed by the sibling [roofing-crm](https://github.com/prismteam-ai/roofing-crm) repo via `shared/data-cids.json` (kept in sync with this manifest).
+- Full run history, including the previous run's CIDs, in `docs/ipfs/history.json`.
+
 ## Context
 
 This repository is the **data gathering and ingestion pipeline** that supplies the [Roofing CRM & Lead Identification UI](https://github.com/prismteam-ai/roofing-crm). The CRM helps roofing companies explore properties in their service area, identify aging roofs and open roofing permits, and turn those signals into leads. This pipeline story covers collecting, loading, reconciling, and exposing the underlying property and permit datasets; the CRM UI/workflow itself is out of scope here.
@@ -115,6 +126,34 @@ The pipeline must demonstrate that data is ingested on an ongoing basis (not a o
 ## Out of Scope
 - Roofing CRM UI, map pin/GPS interaction design, and lead outreach workflows (covered in [roofing-crm](https://github.com/prismteam-ai/roofing-crm)).
 - Live outbound messaging to property owners.
+
+## Kit usage
+
+This repo was built by hand rather than through `soofi-xyz-team-kit`'s own build/configure
+skills. Before deciding that, I read through the skills most relevant to this assignment's
+two open gaps:
+
+- **`county-discovery`** -- the correct starting point for onboarding a new county's sources.
+  Its output convention (a per-source `<county>-sources.yaml` catalog recording status, route,
+  and recipient office per jurisdiction) is the pattern this pipeline's own
+  `docs/nassau-sources.yaml` already follows.
+- **`county-permit-adapter`** -- the right tool for closing the permit-coverage gap flagged in
+  review (this pipeline currently covers Oyster Bay's eTRAKiT portal only, not all of Nassau
+  County). It assumes a running `PermitHarvest` Restate service (`services/permit-harvest.ts`)
+  that dispatches to per-vendor adapter modules on AWS Lambda, with jurisdiction routing read
+  from the sources catalog.
+- **`bbb-harvest`** -- the right tool for the missing BBB contractor-rating data (shown as "not
+  available" everywhere in this pipeline's output). It runs through an AWS Batch worker with
+  immutable content-addressed artifacts, and is gated on an approved BBB API key from
+  `developer.bbb.org` -- BBB's `robots.txt` blocks general crawling, so this is an external
+  approval step, not an engineering one.
+
+All three assume a production substrate this scoped exercise doesn't have and wasn't asked to
+build: a Restate service mesh, AWS Lambda/Batch workers, and CDK-deployed infrastructure (plus,
+for BBB, a third-party API approval outside my control). Standing that up to check a box would
+have been disproportionate to a time-boxed take-home and risked destabilizing a working pipeline
+this close to review. Flagging both gaps honestly here instead -- the kit skills above are
+exactly how I'd close them given production infrastructure and BBB API access.
 
 ## Reference
 - [Roofing CRM & Lead Identification UI](https://github.com/prismteam-ai/roofing-crm)

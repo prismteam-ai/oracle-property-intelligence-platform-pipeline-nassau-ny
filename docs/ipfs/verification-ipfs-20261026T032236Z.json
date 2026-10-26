@@ -1,0 +1,1782 @@
+{
+  "run_id": "ipfs-20261026T032236Z",
+  "gating_gateways": [
+    "https://gateway.pinata.cloud",
+    "https://dget.top"
+  ],
+  "named_by_assignment_attempted_once": [
+    "https://ipfs.io",
+    "https://dweb.link"
+  ],
+  "informational_gateways": [
+    "https://ipfs.filebase.io"
+  ],
+  "results": [
+    {
+      "gateway": "https://gateway.pinata.cloud",
+      "url": "https://gateway.pinata.cloud/ipfs/bafybeibm4mimuy4miseibpylvi6rgrkaedlsyb7vr7sbjgtj5jqukqzpta",
+      "ok": true,
+      "status": 200,
+      "checked_at": "2026-10-26T03:27:58.172Z",
+      "bytes": 22151554,
+      "sha256_match": true,
+      "size_match": true,
+      "error": null,
+      "retry_after": null,
+      "attempts": [
+        {
+          "url": "https://gateway.pinata.cloud/ipfs/bafybeibm4mimuy4miseibpylvi6rgrkaedlsyb7vr7sbjgtj5jqukqzpta",
+          "checked_at": "2026-10-26T03:27:58.172Z",
+          "status": 200,
+          "final_url": "https://gateway.pinata.cloud/ipfs/bafybeibm4mimuy4miseibpylvi6rgrkaedlsyb7vr7sbjgtj5jqukqzpta",
+          "bytes": 22151554,
+          "sha256": "8f1923760f9cf9652baed8dd9933484b9ce22e8c1429d96982bb57ef153aa6db",
+          "content_type": "application/vnd.apache.parquet",
+          "retry_after": null,
+          "seconds": 10.6,
+          "attempt": 1
+        }
+      ],
+      "artifact": "crm_properties",
+      "cid": "bafybeibm4mimuy4miseibpylvi6rgrkaedlsyb7vr7sbjgtj5jqukqzpta",
+      "gating": true
+    },
+    {
+      "gateway": "https://dget.top",
+      "url": "https://dget.top/ipfs/bafybeibm4mimuy4miseibpylvi6rgrkaedlsyb7vr7sbjgtj5jqukqzpta",
+      "ok": true,
+      "status": 200,
+      "checked_at": "2026-10-26T03:28:08.882Z",
+      "bytes": 22151554,
+      "sha256_match": true,
+      "size_match": true,
+      "error": null,
+      "retry_after": null,
+      "attempts": [
+        {
+          "url": "https://dget.top/ipfs/bafybeibm4mimuy4miseibpylvi6rgrkaedlsyb7vr7sbjgtj5jqukqzpta",
+          "checked_at": "2026-10-26T03:28:08.882Z",
+          "status": 200,
+          "final_url": "https://bafybeibm4mimuy4miseibpylvi6rgrkaedlsyb7vr7sbjgtj5jqukqzpta.ipfs.dget.top/",
+          "bytes": 22151554,
+          "sha256": "8f1923760f9cf9652baed8dd9933484b9ce22e8c1429d96982bb57ef153aa6db",
+          "content_type": "application/vnd.apache.parquet",
+          "retry_after": null,
+          "seconds": 6,
+          "attempt": 1
+        }
+      ],
+      "artifact": "crm_properties",
+      "cid": "bafybeibm4mimuy4miseibpylvi6rgrkaedlsyb7vr7sbjgtj5jqukqzpta",
+      "gating": true
+    },
+    {
+      "gateway": "https://ipfs.io",
+      "url": "https://ipfs.io/ipfs/bafybeibm4mimuy4miseibpylvi6rgrkaedlsyb7vr7sbjgtj5jqukqzpta",
+      "ok": false,
+      "status": 429,
+      "checked_at": "2026-10-26T03:28:14.955Z",
+      "bytes": 188,
+      "sha256_match": false,
+      "size_match": false,
+      "error": null,
+      "retry_after": "900",
+      "attempts": [
+        {
+          "url": "https://ipfs.io/ipfs/bafybeibm4mimuy4miseibpylvi6rgrkaedlsyb7vr7sbjgtj5jqukqzpta",
+          "checked_at": "2026-10-26T03:28:14.955Z",
+          "status": 429,
+          "final_url": "https://ipfs.io/ipfs/bafybeibm4mimuy4miseibpylvi6rgrkaedlsyb7vr7sbjgtj5jqukqzpta",
+          "bytes": 188,
+          "sha256": "7d1013800d74dca3f5c6f2fc6d0a70afe853372d4d3ff67de0fac57cedf7652f",
+          "content_type": "text/plain; charset=utf-8",
+          "retry_after": "900",
+          "body_snippet": "(non-200 body, hash omitted)",
+          "seconds": 0.1,
+          "attempt": 1
+        }
+      ],
+      "artifact": "crm_properties",
+      "cid": "bafybeibm4mimuy4miseibpylvi6rgrkaedlsyb7vr7sbjgtj5jqukqzpta",
+      "gating": false
+    },
+    {
+      "gateway": "https://dweb.link",
+      "url": "https://dweb.link/ipfs/bafybeibm4mimuy4miseibpylvi6rgrkaedlsyb7vr7sbjgtj5jqukqzpta",
+      "ok": false,
+      "status": 429,
+      "checked_at": "2026-10-26T03:28:15.146Z",
+      "bytes": 188,
+      "sha256_match": false,
+      "size_match": false,
+      "error": null,
+      "retry_after": "900",
+      "attempts": [
+        {
+          "url": "https://dweb.link/ipfs/bafybeibm4mimuy4miseibpylvi6rgrkaedlsyb7vr7sbjgtj5jqukqzpta",
+          "checked_at": "2026-10-26T03:28:15.146Z",
+          "status": 429,
+          "final_url": "https://dweb.link/ipfs/bafybeibm4mimuy4miseibpylvi6rgrkaedlsyb7vr7sbjgtj5jqukqzpta",
+          "bytes": 188,
+          "sha256": "7d1013800d74dca3f5c6f2fc6d0a70afe853372d4d3ff67de0fac57cedf7652f",
+          "content_type": "text/plain; charset=utf-8",
+          "retry_after": "900",
+          "body_snippet": "(non-200 body, hash omitted)",
+          "seconds": 0.1,
+          "attempt": 1
+        }
+      ],
+      "artifact": "crm_properties",
+      "cid": "bafybeibm4mimuy4miseibpylvi6rgrkaedlsyb7vr7sbjgtj5jqukqzpta",
+      "gating": false
+    },
+    {
+      "gateway": "https://ipfs.filebase.io",
+      "url": "https://ipfs.filebase.io/ipfs/bafybeibm4mimuy4miseibpylvi6rgrkaedlsyb7vr7sbjgtj5jqukqzpta",
+      "ok": true,
+      "status": 200,
+      "checked_at": "2026-10-26T03:28:15.294Z",
+      "bytes": 22151554,
+      "sha256_match": true,
+      "size_match": true,
+      "error": null,
+      "retry_after": null,
+      "attempts": [
+        {
+          "url": "https://ipfs.filebase.io/ipfs/bafybeibm4mimuy4miseibpylvi6rgrkaedlsyb7vr7sbjgtj5jqukqzpta",
+          "checked_at": "2026-10-26T03:28:15.294Z",
+          "status": 200,
+          "final_url": "https://ipfs.filebase.io/ipfs/bafybeibm4mimuy4miseibpylvi6rgrkaedlsyb7vr7sbjgtj5jqukqzpta",
+          "bytes": 22151554,
+          "sha256": "8f1923760f9cf9652baed8dd9933484b9ce22e8c1429d96982bb57ef153aa6db",
+          "content_type": "application/vnd.apache.parquet",
+          "retry_after": null,
+          "seconds": 6.2,
+          "attempt": 1
+        }
+      ],
+      "artifact": "crm_properties",
+      "cid": "bafybeibm4mimuy4miseibpylvi6rgrkaedlsyb7vr7sbjgtj5jqukqzpta",
+      "gating": false
+    },
+    {
+      "gateway": "https://gateway.pinata.cloud",
+      "url": "https://gateway.pinata.cloud/ipfs/bafkreibsz4fuppdn5fdxabyogghtcgubix4rz3qgev675wdemxwquzzg6u",
+      "ok": true,
+      "status": 200,
+      "checked_at": "2026-10-26T03:28:21.557Z",
+      "bytes": 29461,
+      "sha256_match": true,
+      "size_match": true,
+      "error": null,
+      "retry_after": null,
+      "attempts": [
+        {
+          "url": "https://gateway.pinata.cloud/ipfs/bafkreibsz4fuppdn5fdxabyogghtcgubix4rz3qgev675wdemxwquzzg6u",
+          "checked_at": "2026-10-26T03:28:21.557Z",
+          "status": 200,
+          "final_url": "https://gateway.pinata.cloud/ipfs/bafkreibsz4fuppdn5fdxabyogghtcgubix4rz3qgev675wdemxwquzzg6u",
+          "bytes": 29461,
+          "sha256": "32cf0b47bc6de94770070e318f311a8145f91cee06257dfed86465ed0a6726f5",
+          "content_type": "application/vnd.apache.parquet",
+          "retry_after": null,
+          "seconds": 7.9,
+          "attempt": 1
+        }
+      ],
+      "artifact": "crm_permits",
+      "cid": "bafkreibsz4fuppdn5fdxabyogghtcgubix4rz3qgev675wdemxwquzzg6u",
+      "gating": true
+    },
+    {
+      "gateway": "https://dget.top",
+      "url": "https://dget.top/ipfs/bafkreibsz4fuppdn5fdxabyogghtcgubix4rz3qgev675wdemxwquzzg6u",
+      "ok": true,
+      "status": 200,
+      "checked_at": "2026-10-26T03:28:29.543Z",
+      "bytes": 29461,
+      "sha256_match": true,
+      "size_match": true,
+      "error": null,
+      "retry_after": null,
+      "attempts": [
+        {
+          "url": "https://dget.top/ipfs/bafkreibsz4fuppdn5fdxabyogghtcgubix4rz3qgev675wdemxwquzzg6u",
+          "checked_at": "2026-10-26T03:28:29.543Z",
+          "status": 200,
+          "final_url": "https://bafkreibsz4fuppdn5fdxabyogghtcgubix4rz3qgev675wdemxwquzzg6u.ipfs.dget.top/",
+          "bytes": 29461,
+          "sha256": "32cf0b47bc6de94770070e318f311a8145f91cee06257dfed86465ed0a6726f5",
+          "content_type": "application/vnd.apache.parquet",
+          "retry_after": null,
+          "seconds": 2,
+          "attempt": 1
+        }
+      ],
+      "artifact": "crm_permits",
+      "cid": "bafkreibsz4fuppdn5fdxabyogghtcgubix4rz3qgev675wdemxwquzzg6u",
+      "gating": true
+    },
+    {
+      "gateway": "https://ipfs.io",
+      "url": "https://ipfs.io/ipfs/bafkreibsz4fuppdn5fdxabyogghtcgubix4rz3qgev675wdemxwquzzg6u",
+      "ok": false,
+      "status": 429,
+      "checked_at": "2026-10-26T03:28:31.660Z",
+      "bytes": 188,
+      "sha256_match": false,
+      "size_match": false,
+      "error": null,
+      "retry_after": "900",
+      "attempts": [
+        {
+          "url": "https://ipfs.io/ipfs/bafkreibsz4fuppdn5fdxabyogghtcgubix4rz3qgev675wdemxwquzzg6u",
+          "checked_at": "2026-10-26T03:28:31.660Z",
+          "status": 429,
+          "final_url": "https://ipfs.io/ipfs/bafkreibsz4fuppdn5fdxabyogghtcgubix4rz3qgev675wdemxwquzzg6u",
+          "bytes": 188,
+          "sha256": "0566aed182b628eaac16e510cade29a4852dec50af8faf9b3236cc6b8cbd34d7",
+          "content_type": "text/plain; charset=utf-8",
+          "retry_after": "900",
+          "body_snippet": "(non-200 body, hash omitted)",
+          "seconds": 0.1,
+          "attempt": 1
+        }
+      ],
+      "artifact": "crm_permits",
+      "cid": "bafkreibsz4fuppdn5fdxabyogghtcgubix4rz3qgev675wdemxwquzzg6u",
+      "gating": false
+    },
+    {
+      "gateway": "https://dweb.link",
+      "url": "https://dweb.link/ipfs/bafkreibsz4fuppdn5fdxabyogghtcgubix4rz3qgev675wdemxwquzzg6u",
+      "ok": false,
+      "status": 429,
+      "checked_at": "2026-10-26T03:28:31.803Z",
+      "bytes": 188,
+      "sha256_match": false,
+      "size_match": false,
+      "error": null,
+      "retry_after": "900",
+      "attempts": [
+        {
+          "url": "https://dweb.link/ipfs/bafkreibsz4fuppdn5fdxabyogghtcgubix4rz3qgev675wdemxwquzzg6u",
+          "checked_at": "2026-10-26T03:28:31.803Z",
+          "status": 429,
+          "final_url": "https://dweb.link/ipfs/bafkreibsz4fuppdn5fdxabyogghtcgubix4rz3qgev675wdemxwquzzg6u",
+          "bytes": 188,
+          "sha256": "0566aed182b628eaac16e510cade29a4852dec50af8faf9b3236cc6b8cbd34d7",
+          "content_type": "text/plain; charset=utf-8",
+          "retry_after": "900",
+          "body_snippet": "(non-200 body, hash omitted)",
+          "seconds": 0.1,
+          "attempt": 1
+        }
+      ],
+      "artifact": "crm_permits",
+      "cid": "bafkreibsz4fuppdn5fdxabyogghtcgubix4rz3qgev675wdemxwquzzg6u",
+      "gating": false
+    },
+    {
+      "gateway": "https://ipfs.filebase.io",
+      "url": "https://ipfs.filebase.io/ipfs/bafkreibsz4fuppdn5fdxabyogghtcgubix4rz3qgev675wdemxwquzzg6u",
+      "ok": true,
+      "status": 200,
+      "checked_at": "2026-10-26T03:28:31.946Z",
+      "bytes": 29461,
+      "sha256_match": true,
+      "size_match": true,
+      "error": null,
+      "retry_after": null,
+      "attempts": [
+        {
+          "url": "https://ipfs.filebase.io/ipfs/bafkreibsz4fuppdn5fdxabyogghtcgubix4rz3qgev675wdemxwquzzg6u",
+          "checked_at": "2026-10-26T03:28:31.946Z",
+          "status": 200,
+          "final_url": "https://ipfs.filebase.io/ipfs/bafkreibsz4fuppdn5fdxabyogghtcgubix4rz3qgev675wdemxwquzzg6u",
+          "bytes": 29461,
+          "sha256": "32cf0b47bc6de94770070e318f311a8145f91cee06257dfed86465ed0a6726f5",
+          "content_type": "application/vnd.apache.parquet",
+          "retry_after": null,
+          "seconds": 0.4,
+          "attempt": 1
+        }
+      ],
+      "artifact": "crm_permits",
+      "cid": "bafkreibsz4fuppdn5fdxabyogghtcgubix4rz3qgev675wdemxwquzzg6u",
+      "gating": false
+    },
+    {
+      "gateway": "https://gateway.pinata.cloud",
+      "url": "https://gateway.pinata.cloud/ipfs/bafybeigezbm2m7bi536yo55snhfx5iqoi3uja7zcnw3xinsp666bg25s3a",
+      "ok": true,
+      "status": 200,
+      "checked_at": "2026-10-26T03:28:32.380Z",
+      "bytes": 33224299,
+      "sha256_match": true,
+      "size_match": true,
+      "error": null,
+      "retry_after": null,
+      "attempts": [
+        {
+          "url": "https://gateway.pinata.cloud/ipfs/bafybeigezbm2m7bi536yo55snhfx5iqoi3uja7zcnw3xinsp666bg25s3a",
+          "checked_at": "2026-10-26T03:28:32.380Z",
+          "status": 200,
+          "final_url": "https://gateway.pinata.cloud/ipfs/bafybeigezbm2m7bi536yo55snhfx5iqoi3uja7zcnw3xinsp666bg25s3a",
+          "bytes": 33224299,
+          "sha256": "91f8edac0a6b4bc9fff0706cf8f4caa44424e237d80f59125ca035ea9f9296e5",
+          "content_type": "application/vnd.apache.parquet",
+          "retry_after": null,
+          "seconds": 8.8,
+          "attempt": 1
+        }
+      ],
+      "artifact": "properties",
+      "cid": "bafybeigezbm2m7bi536yo55snhfx5iqoi3uja7zcnw3xinsp666bg25s3a",
+      "gating": true
+    },
+    {
+      "gateway": "https://dget.top",
+      "url": "https://dget.top/ipfs/bafybeigezbm2m7bi536yo55snhfx5iqoi3uja7zcnw3xinsp666bg25s3a",
+      "ok": true,
+      "status": 200,
+      "checked_at": "2026-10-26T03:28:41.327Z",
+      "bytes": 33224299,
+      "sha256_match": true,
+      "size_match": true,
+      "error": null,
+      "retry_after": null,
+      "attempts": [
+        {
+          "url": "https://dget.top/ipfs/bafybeigezbm2m7bi536yo55snhfx5iqoi3uja7zcnw3xinsp666bg25s3a",
+          "checked_at": "2026-10-26T03:28:41.327Z",
+          "status": 200,
+          "final_url": "https://bafybeigezbm2m7bi536yo55snhfx5iqoi3uja7zcnw3xinsp666bg25s3a.ipfs.dget.top/",
+          "bytes": 33224299,
+          "sha256": "91f8edac0a6b4bc9fff0706cf8f4caa44424e237d80f59125ca035ea9f9296e5",
+          "content_type": "application/vnd.apache.parquet",
+          "retry_after": null,
+          "seconds": 6.7,
+          "attempt": 1
+        }
+      ],
+      "artifact": "properties",
+      "cid": "bafybeigezbm2m7bi536yo55snhfx5iqoi3uja7zcnw3xinsp666bg25s3a",
+      "gating": true
+    },
+    {
+      "gateway": "https://ipfs.io",
+      "url": "https://ipfs.io/ipfs/bafybeigezbm2m7bi536yo55snhfx5iqoi3uja7zcnw3xinsp666bg25s3a",
+      "ok": false,
+      "status": 429,
+      "checked_at": "2026-10-26T03:28:48.110Z",
+      "bytes": 188,
+      "sha256_match": false,
+      "size_match": false,
+      "error": null,
+      "retry_after": "900",
+      "attempts": [
+        {
+          "url": "https://ipfs.io/ipfs/bafybeigezbm2m7bi536yo55snhfx5iqoi3uja7zcnw3xinsp666bg25s3a",
+          "checked_at": "2026-10-26T03:28:48.110Z",
+          "status": 429,
+          "final_url": "https://ipfs.io/ipfs/bafybeigezbm2m7bi536yo55snhfx5iqoi3uja7zcnw3xinsp666bg25s3a",
+          "bytes": 188,
+          "sha256": "b45f8f73f1337221f47de67eae77253ed81f8a9d9f043bbf82f8fd1e8853a06c",
+          "content_type": "text/plain; charset=utf-8",
+          "retry_after": "900",
+          "body_snippet": "(non-200 body, hash omitted)",
+          "seconds": 0.1,
+          "attempt": 1
+        }
+      ],
+      "artifact": "properties",
+      "cid": "bafybeigezbm2m7bi536yo55snhfx5iqoi3uja7zcnw3xinsp666bg25s3a",
+      "gating": false
+    },
+    {
+      "gateway": "https://dweb.link",
+      "url": "https://dweb.link/ipfs/bafybeigezbm2m7bi536yo55snhfx5iqoi3uja7zcnw3xinsp666bg25s3a",
+      "ok": false,
+      "status": 429,
+      "checked_at": "2026-10-26T03:28:48.292Z",
+      "bytes": 188,
+      "sha256_match": false,
+      "size_match": false,
+      "error": null,
+      "retry_after": "900",
+      "attempts": [
+        {
+          "url": "https://dweb.link/ipfs/bafybeigezbm2m7bi536yo55snhfx5iqoi3uja7zcnw3xinsp666bg25s3a",
+          "checked_at": "2026-10-26T03:28:48.292Z",
+          "status": 429,
+          "final_url": "https://dweb.link/ipfs/bafybeigezbm2m7bi536yo55snhfx5iqoi3uja7zcnw3xinsp666bg25s3a",
+          "bytes": 188,
+          "sha256": "b45f8f73f1337221f47de67eae77253ed81f8a9d9f043bbf82f8fd1e8853a06c",
+          "content_type": "text/plain; charset=utf-8",
+          "retry_after": "900",
+          "body_snippet": "(non-200 body, hash omitted)",
+          "seconds": 0.1,
+          "attempt": 1
+        }
+      ],
+      "artifact": "properties",
+      "cid": "bafybeigezbm2m7bi536yo55snhfx5iqoi3uja7zcnw3xinsp666bg25s3a",
+      "gating": false
+    },
+    {
+      "gateway": "https://ipfs.filebase.io",
+      "url": "https://ipfs.filebase.io/ipfs/bafybeigezbm2m7bi536yo55snhfx5iqoi3uja7zcnw3xinsp666bg25s3a",
+      "ok": true,
+      "status": 200,
+      "checked_at": "2026-10-26T03:28:48.446Z",
+      "bytes": 33224299,
+      "sha256_match": true,
+      "size_match": true,
+      "error": null,
+      "retry_after": null,
+      "attempts": [
+        {
+          "url": "https://ipfs.filebase.io/ipfs/bafybeigezbm2m7bi536yo55snhfx5iqoi3uja7zcnw3xinsp666bg25s3a",
+          "checked_at": "2026-10-26T03:28:48.446Z",
+          "status": 200,
+          "final_url": "https://ipfs.filebase.io/ipfs/bafybeigezbm2m7bi536yo55snhfx5iqoi3uja7zcnw3xinsp666bg25s3a",
+          "bytes": 33224299,
+          "sha256": "91f8edac0a6b4bc9fff0706cf8f4caa44424e237d80f59125ca035ea9f9296e5",
+          "content_type": "application/vnd.apache.parquet",
+          "retry_after": null,
+          "seconds": 10.1,
+          "attempt": 1
+        }
+      ],
+      "artifact": "properties",
+      "cid": "bafybeigezbm2m7bi536yo55snhfx5iqoi3uja7zcnw3xinsp666bg25s3a",
+      "gating": false
+    },
+    {
+      "gateway": "https://gateway.pinata.cloud",
+      "url": "https://gateway.pinata.cloud/ipfs/bafybeif2j5ixwnwerqdqwh4zr4xc3lzovz5gpefh6pmqfsl4kodyjf5jqm",
+      "ok": true,
+      "status": 200,
+      "checked_at": "2026-10-26T03:28:58.644Z",
+      "bytes": 8965267,
+      "sha256_match": true,
+      "size_match": true,
+      "error": null,
+      "retry_after": null,
+      "attempts": [
+        {
+          "url": "https://gateway.pinata.cloud/ipfs/bafybeif2j5ixwnwerqdqwh4zr4xc3lzovz5gpefh6pmqfsl4kodyjf5jqm",
+          "checked_at": "2026-10-26T03:28:58.644Z",
+          "status": 200,
+          "final_url": "https://gateway.pinata.cloud/ipfs/bafybeif2j5ixwnwerqdqwh4zr4xc3lzovz5gpefh6pmqfsl4kodyjf5jqm",
+          "bytes": 8965267,
+          "sha256": "f11e2a3b3f0b78f7d94d840a9f9c77988f0a2032b17725bcd3f65116e0fb32af",
+          "content_type": "application/vnd.apache.parquet",
+          "retry_after": null,
+          "seconds": 5.5,
+          "attempt": 1
+        }
+      ],
+      "artifact": "property_roof_age",
+      "cid": "bafybeif2j5ixwnwerqdqwh4zr4xc3lzovz5gpefh6pmqfsl4kodyjf5jqm",
+      "gating": true
+    },
+    {
+      "gateway": "https://dget.top",
+      "url": "https://dget.top/ipfs/bafybeif2j5ixwnwerqdqwh4zr4xc3lzovz5gpefh6pmqfsl4kodyjf5jqm",
+      "ok": true,
+      "status": 200,
+      "checked_at": "2026-10-26T03:29:04.203Z",
+      "bytes": 8965267,
+      "sha256_match": true,
+      "size_match": true,
+      "error": null,
+      "retry_after": null,
+      "attempts": [
+        {
+          "url": "https://dget.top/ipfs/bafybeif2j5ixwnwerqdqwh4zr4xc3lzovz5gpefh6pmqfsl4kodyjf5jqm",
+          "checked_at": "2026-10-26T03:29:04.203Z",
+          "status": 200,
+          "final_url": "https://bafybeif2j5ixwnwerqdqwh4zr4xc3lzovz5gpefh6pmqfsl4kodyjf5jqm.ipfs.dget.top/",
+          "bytes": 8965267,
+          "sha256": "f11e2a3b3f0b78f7d94d840a9f9c77988f0a2032b17725bcd3f65116e0fb32af",
+          "content_type": "application/vnd.apache.parquet",
+          "retry_after": null,
+          "seconds": 2.9,
+          "attempt": 1
+        }
+      ],
+      "artifact": "property_roof_age",
+      "cid": "bafybeif2j5ixwnwerqdqwh4zr4xc3lzovz5gpefh6pmqfsl4kodyjf5jqm",
+      "gating": true
+    },
+    {
+      "gateway": "https://ipfs.io",
+      "url": "https://ipfs.io/ipfs/bafybeif2j5ixwnwerqdqwh4zr4xc3lzovz5gpefh6pmqfsl4kodyjf5jqm",
+      "ok": false,
+      "status": 429,
+      "checked_at": "2026-10-26T03:29:07.163Z",
+      "bytes": 188,
+      "sha256_match": false,
+      "size_match": false,
+      "error": null,
+      "retry_after": "900",
+      "attempts": [
+        {
+          "url": "https://ipfs.io/ipfs/bafybeif2j5ixwnwerqdqwh4zr4xc3lzovz5gpefh6pmqfsl4kodyjf5jqm",
+          "checked_at": "2026-10-26T03:29:07.163Z",
+          "status": 429,
+          "final_url": "https://ipfs.io/ipfs/bafybeif2j5ixwnwerqdqwh4zr4xc3lzovz5gpefh6pmqfsl4kodyjf5jqm",
+          "bytes": 188,
+          "sha256": "2cd2eae73ae4b3b07e275b3ec61670d43741fdee4cfdc87170885c79b03136fc",
+          "content_type": "text/plain; charset=utf-8",
+          "retry_after": "900",
+          "body_snippet": "(non-200 body, hash omitted)",
+          "seconds": 0.1,
+          "attempt": 1
+        }
+      ],
+      "artifact": "property_roof_age",
+      "cid": "bafybeif2j5ixwnwerqdqwh4zr4xc3lzovz5gpefh6pmqfsl4kodyjf5jqm",
+      "gating": false
+    },
+    {
+      "gateway": "https://dweb.link",
+      "url": "https://dweb.link/ipfs/bafybeif2j5ixwnwerqdqwh4zr4xc3lzovz5gpefh6pmqfsl4kodyjf5jqm",
+      "ok": false,
+      "status": 429,
+      "checked_at": "2026-10-26T03:29:07.317Z",
+      "bytes": 188,
+      "sha256_match": false,
+      "size_match": false,
+      "error": null,
+      "retry_after": "900",
+      "attempts": [
+        {
+          "url": "https://dweb.link/ipfs/bafybeif2j5ixwnwerqdqwh4zr4xc3lzovz5gpefh6pmqfsl4kodyjf5jqm",
+          "checked_at": "2026-10-26T03:29:07.317Z",
+          "status": 429,
+          "final_url": "https://dweb.link/ipfs/bafybeif2j5ixwnwerqdqwh4zr4xc3lzovz5gpefh6pmqfsl4kodyjf5jqm",
+          "bytes": 188,
+          "sha256": "2cd2eae73ae4b3b07e275b3ec61670d43741fdee4cfdc87170885c79b03136fc",
+          "content_type": "text/plain; charset=utf-8",
+          "retry_after": "900",
+          "body_snippet": "(non-200 body, hash omitted)",
+          "seconds": 0.1,
+          "attempt": 1
+        }
+      ],
+      "artifact": "property_roof_age",
+      "cid": "bafybeif2j5ixwnwerqdqwh4zr4xc3lzovz5gpefh6pmqfsl4kodyjf5jqm",
+      "gating": false
+    },
+    {
+      "gateway": "https://ipfs.filebase.io",
+      "url": "https://ipfs.filebase.io/ipfs/bafybeif2j5ixwnwerqdqwh4zr4xc3lzovz5gpefh6pmqfsl4kodyjf5jqm",
+      "ok": true,
+      "status": 200,
+      "checked_at": "2026-10-26T03:29:07.459Z",
+      "bytes": 8965267,
+      "sha256_match": true,
+      "size_match": true,
+      "error": null,
+      "retry_after": null,
+      "attempts": [
+        {
+          "url": "https://ipfs.filebase.io/ipfs/bafybeif2j5ixwnwerqdqwh4zr4xc3lzovz5gpefh6pmqfsl4kodyjf5jqm",
+          "checked_at": "2026-10-26T03:29:07.459Z",
+          "status": 200,
+          "final_url": "https://ipfs.filebase.io/ipfs/bafybeif2j5ixwnwerqdqwh4zr4xc3lzovz5gpefh6pmqfsl4kodyjf5jqm",
+          "bytes": 8965267,
+          "sha256": "f11e2a3b3f0b78f7d94d840a9f9c77988f0a2032b17725bcd3f65116e0fb32af",
+          "content_type": "application/vnd.apache.parquet",
+          "retry_after": null,
+          "seconds": 2.1,
+          "attempt": 1
+        }
+      ],
+      "artifact": "property_roof_age",
+      "cid": "bafybeif2j5ixwnwerqdqwh4zr4xc3lzovz5gpefh6pmqfsl4kodyjf5jqm",
+      "gating": false
+    },
+    {
+      "gateway": "https://gateway.pinata.cloud",
+      "url": "https://gateway.pinata.cloud/ipfs/bafybeicpigph4hkhqhaos6eznglbmfxe2p6bcyorkmsovzv77wkbu22fwy",
+      "ok": true,
+      "status": 200,
+      "checked_at": "2026-10-26T03:29:09.593Z",
+      "bytes": 7092110,
+      "sha256_match": true,
+      "size_match": true,
+      "error": null,
+      "retry_after": null,
+      "attempts": [
+        {
+          "url": "https://gateway.pinata.cloud/ipfs/bafybeicpigph4hkhqhaos6eznglbmfxe2p6bcyorkmsovzv77wkbu22fwy",
+          "checked_at": "2026-10-26T03:29:09.593Z",
+          "status": 200,
+          "final_url": "https://gateway.pinata.cloud/ipfs/bafybeicpigph4hkhqhaos6eznglbmfxe2p6bcyorkmsovzv77wkbu22fwy",
+          "bytes": 7092110,
+          "sha256": "fedbc34b4c7b038a83298c1526f443db538d66e1f5bc90a78a80b703acfa37ae",
+          "content_type": "application/vnd.apache.parquet",
+          "retry_after": null,
+          "seconds": 8.5,
+          "attempt": 1
+        }
+      ],
+      "artifact": "roof_age_lineage",
+      "cid": "bafybeicpigph4hkhqhaos6eznglbmfxe2p6bcyorkmsovzv77wkbu22fwy",
+      "gating": true
+    },
+    {
+      "gateway": "https://dget.top",
+      "url": "https://dget.top/ipfs/bafybeicpigph4hkhqhaos6eznglbmfxe2p6bcyorkmsovzv77wkbu22fwy",
+      "ok": true,
+      "status": 200,
+      "checked_at": "2026-10-26T03:29:18.218Z",
+      "bytes": 7092110,
+      "sha256_match": true,
+      "size_match": true,
+      "error": null,
+      "retry_after": null,
+      "attempts": [
+        {
+          "url": "https://dget.top/ipfs/bafybeicpigph4hkhqhaos6eznglbmfxe2p6bcyorkmsovzv77wkbu22fwy",
+          "checked_at": "2026-10-26T03:29:18.218Z",
+          "status": 200,
+          "final_url": "https://bafybeicpigph4hkhqhaos6eznglbmfxe2p6bcyorkmsovzv77wkbu22fwy.ipfs.dget.top/",
+          "bytes": 7092110,
+          "sha256": "fedbc34b4c7b038a83298c1526f443db538d66e1f5bc90a78a80b703acfa37ae",
+          "content_type": "application/vnd.apache.parquet",
+          "retry_after": null,
+          "seconds": 2.9,
+          "attempt": 1
+        }
+      ],
+      "artifact": "roof_age_lineage",
+      "cid": "bafybeicpigph4hkhqhaos6eznglbmfxe2p6bcyorkmsovzv77wkbu22fwy",
+      "gating": true
+    },
+    {
+      "gateway": "https://ipfs.io",
+      "url": "https://ipfs.io/ipfs/bafybeicpigph4hkhqhaos6eznglbmfxe2p6bcyorkmsovzv77wkbu22fwy",
+      "ok": false,
+      "status": 429,
+      "checked_at": "2026-10-26T03:29:21.238Z",
+      "bytes": 188,
+      "sha256_match": false,
+      "size_match": false,
+      "error": null,
+      "retry_after": "900",
+      "attempts": [
+        {
+          "url": "https://ipfs.io/ipfs/bafybeicpigph4hkhqhaos6eznglbmfxe2p6bcyorkmsovzv77wkbu22fwy",
+          "checked_at": "2026-10-26T03:29:21.238Z",
+          "status": 429,
+          "final_url": "https://ipfs.io/ipfs/bafybeicpigph4hkhqhaos6eznglbmfxe2p6bcyorkmsovzv77wkbu22fwy",
+          "bytes": 188,
+          "sha256": "4abdef50b5b899e313217da88206371e7a4ea572ab8f07ce303a02f667da5eea",
+          "content_type": "text/plain; charset=utf-8",
+          "retry_after": "900",
+          "body_snippet": "(non-200 body, hash omitted)",
+          "seconds": 0.1,
+          "attempt": 1
+        }
+      ],
+      "artifact": "roof_age_lineage",
+      "cid": "bafybeicpigph4hkhqhaos6eznglbmfxe2p6bcyorkmsovzv77wkbu22fwy",
+      "gating": false
+    },
+    {
+      "gateway": "https://dweb.link",
+      "url": "https://dweb.link/ipfs/bafybeicpigph4hkhqhaos6eznglbmfxe2p6bcyorkmsovzv77wkbu22fwy",
+      "ok": false,
+      "status": 429,
+      "checked_at": "2026-10-26T03:29:21.430Z",
+      "bytes": 188,
+      "sha256_match": false,
+      "size_match": false,
+      "error": null,
+      "retry_after": "900",
+      "attempts": [
+        {
+          "url": "https://dweb.link/ipfs/bafybeicpigph4hkhqhaos6eznglbmfxe2p6bcyorkmsovzv77wkbu22fwy",
+          "checked_at": "2026-10-26T03:29:21.430Z",
+          "status": 429,
+          "final_url": "https://dweb.link/ipfs/bafybeicpigph4hkhqhaos6eznglbmfxe2p6bcyorkmsovzv77wkbu22fwy",
+          "bytes": 188,
+          "sha256": "4abdef50b5b899e313217da88206371e7a4ea572ab8f07ce303a02f667da5eea",
+          "content_type": "text/plain; charset=utf-8",
+          "retry_after": "900",
+          "body_snippet": "(non-200 body, hash omitted)",
+          "seconds": 0.3,
+          "attempt": 1
+        }
+      ],
+      "artifact": "roof_age_lineage",
+      "cid": "bafybeicpigph4hkhqhaos6eznglbmfxe2p6bcyorkmsovzv77wkbu22fwy",
+      "gating": false
+    },
+    {
+      "gateway": "https://ipfs.filebase.io",
+      "url": "https://ipfs.filebase.io/ipfs/bafybeicpigph4hkhqhaos6eznglbmfxe2p6bcyorkmsovzv77wkbu22fwy",
+      "ok": true,
+      "status": 200,
+      "checked_at": "2026-10-26T03:29:21.754Z",
+      "bytes": 7092110,
+      "sha256_match": true,
+      "size_match": true,
+      "error": null,
+      "retry_after": null,
+      "attempts": [
+        {
+          "url": "https://ipfs.filebase.io/ipfs/bafybeicpigph4hkhqhaos6eznglbmfxe2p6bcyorkmsovzv77wkbu22fwy",
+          "checked_at": "2026-10-26T03:29:21.754Z",
+          "status": 200,
+          "final_url": "https://ipfs.filebase.io/ipfs/bafybeicpigph4hkhqhaos6eznglbmfxe2p6bcyorkmsovzv77wkbu22fwy",
+          "bytes": 7092110,
+          "sha256": "fedbc34b4c7b038a83298c1526f443db538d66e1f5bc90a78a80b703acfa37ae",
+          "content_type": "application/vnd.apache.parquet",
+          "retry_after": null,
+          "seconds": 1.8,
+          "attempt": 1
+        }
+      ],
+      "artifact": "roof_age_lineage",
+      "cid": "bafybeicpigph4hkhqhaos6eznglbmfxe2p6bcyorkmsovzv77wkbu22fwy",
+      "gating": false
+    },
+    {
+      "gateway": "https://gateway.pinata.cloud",
+      "url": "https://gateway.pinata.cloud/ipfs/bafybeic7nns2d5b27chavdvuj4p4e5mhdmfdht6l3jik5ddf5mh37qqkpy",
+      "ok": true,
+      "status": 200,
+      "checked_at": "2026-10-26T03:29:23.623Z",
+      "bytes": 7347402,
+      "sha256_match": true,
+      "size_match": true,
+      "error": null,
+      "retry_after": null,
+      "attempts": [
+        {
+          "url": "https://gateway.pinata.cloud/ipfs/bafybeic7nns2d5b27chavdvuj4p4e5mhdmfdht6l3jik5ddf5mh37qqkpy",
+          "checked_at": "2026-10-26T03:29:23.623Z",
+          "status": 200,
+          "final_url": "https://gateway.pinata.cloud/ipfs/bafybeic7nns2d5b27chavdvuj4p4e5mhdmfdht6l3jik5ddf5mh37qqkpy",
+          "bytes": 7347402,
+          "sha256": "4e7752a6393ed6353a3a6cdb58e11c365891263c8ec414c8bf1c3d9f1675c92b",
+          "content_type": "application/vnd.apache.parquet",
+          "retry_after": null,
+          "seconds": 6.3,
+          "attempt": 1
+        }
+      ],
+      "artifact": "ownership_signals",
+      "cid": "bafybeic7nns2d5b27chavdvuj4p4e5mhdmfdht6l3jik5ddf5mh37qqkpy",
+      "gating": true
+    },
+    {
+      "gateway": "https://dget.top",
+      "url": "https://dget.top/ipfs/bafybeic7nns2d5b27chavdvuj4p4e5mhdmfdht6l3jik5ddf5mh37qqkpy",
+      "ok": true,
+      "status": 200,
+      "checked_at": "2026-10-26T03:29:30.039Z",
+      "bytes": 7347402,
+      "sha256_match": true,
+      "size_match": true,
+      "error": null,
+      "retry_after": null,
+      "attempts": [
+        {
+          "url": "https://dget.top/ipfs/bafybeic7nns2d5b27chavdvuj4p4e5mhdmfdht6l3jik5ddf5mh37qqkpy",
+          "checked_at": "2026-10-26T03:29:30.039Z",
+          "status": 200,
+          "final_url": "https://bafybeic7nns2d5b27chavdvuj4p4e5mhdmfdht6l3jik5ddf5mh37qqkpy.ipfs.dget.top/",
+          "bytes": 7347402,
+          "sha256": "4e7752a6393ed6353a3a6cdb58e11c365891263c8ec414c8bf1c3d9f1675c92b",
+          "content_type": "application/vnd.apache.parquet",
+          "retry_after": null,
+          "seconds": 4.1,
+          "attempt": 1
+        }
+      ],
+      "artifact": "ownership_signals",
+      "cid": "bafybeic7nns2d5b27chavdvuj4p4e5mhdmfdht6l3jik5ddf5mh37qqkpy",
+      "gating": true
+    },
+    {
+      "gateway": "https://ipfs.io",
+      "url": "https://ipfs.io/ipfs/bafybeic7nns2d5b27chavdvuj4p4e5mhdmfdht6l3jik5ddf5mh37qqkpy",
+      "ok": false,
+      "status": 429,
+      "checked_at": "2026-10-26T03:29:34.224Z",
+      "bytes": 188,
+      "sha256_match": false,
+      "size_match": false,
+      "error": null,
+      "retry_after": "900",
+      "attempts": [
+        {
+          "url": "https://ipfs.io/ipfs/bafybeic7nns2d5b27chavdvuj4p4e5mhdmfdht6l3jik5ddf5mh37qqkpy",
+          "checked_at": "2026-10-26T03:29:34.224Z",
+          "status": 429,
+          "final_url": "https://ipfs.io/ipfs/bafybeic7nns2d5b27chavdvuj4p4e5mhdmfdht6l3jik5ddf5mh37qqkpy",
+          "bytes": 188,
+          "sha256": "5daaeb10bb9a8cfeb4744ca46ea5fd7d067599f45fc6b2a794269bc5d7426e20",
+          "content_type": "text/plain; charset=utf-8",
+          "retry_after": "900",
+          "body_snippet": "(non-200 body, hash omitted)",
+          "seconds": 0.1,
+          "attempt": 1
+        }
+      ],
+      "artifact": "ownership_signals",
+      "cid": "bafybeic7nns2d5b27chavdvuj4p4e5mhdmfdht6l3jik5ddf5mh37qqkpy",
+      "gating": false
+    },
+    {
+      "gateway": "https://dweb.link",
+      "url": "https://dweb.link/ipfs/bafybeic7nns2d5b27chavdvuj4p4e5mhdmfdht6l3jik5ddf5mh37qqkpy",
+      "ok": false,
+      "status": 429,
+      "checked_at": "2026-10-26T03:29:34.372Z",
+      "bytes": 188,
+      "sha256_match": false,
+      "size_match": false,
+      "error": null,
+      "retry_after": "900",
+      "attempts": [
+        {
+          "url": "https://dweb.link/ipfs/bafybeic7nns2d5b27chavdvuj4p4e5mhdmfdht6l3jik5ddf5mh37qqkpy",
+          "checked_at": "2026-10-26T03:29:34.372Z",
+          "status": 429,
+          "final_url": "https://dweb.link/ipfs/bafybeic7nns2d5b27chavdvuj4p4e5mhdmfdht6l3jik5ddf5mh37qqkpy",
+          "bytes": 188,
+          "sha256": "5daaeb10bb9a8cfeb4744ca46ea5fd7d067599f45fc6b2a794269bc5d7426e20",
+          "content_type": "text/plain; charset=utf-8",
+          "retry_after": "900",
+          "body_snippet": "(non-200 body, hash omitted)",
+          "seconds": 0.1,
+          "attempt": 1
+        }
+      ],
+      "artifact": "ownership_signals",
+      "cid": "bafybeic7nns2d5b27chavdvuj4p4e5mhdmfdht6l3jik5ddf5mh37qqkpy",
+      "gating": false
+    },
+    {
+      "gateway": "https://ipfs.filebase.io",
+      "url": "https://ipfs.filebase.io/ipfs/bafybeic7nns2d5b27chavdvuj4p4e5mhdmfdht6l3jik5ddf5mh37qqkpy",
+      "ok": true,
+      "status": 200,
+      "checked_at": "2026-10-26T03:29:34.550Z",
+      "bytes": 7347402,
+      "sha256_match": true,
+      "size_match": true,
+      "error": null,
+      "retry_after": null,
+      "attempts": [
+        {
+          "url": "https://ipfs.filebase.io/ipfs/bafybeic7nns2d5b27chavdvuj4p4e5mhdmfdht6l3jik5ddf5mh37qqkpy",
+          "checked_at": "2026-10-26T03:29:34.550Z",
+          "status": 200,
+          "final_url": "https://ipfs.filebase.io/ipfs/bafybeic7nns2d5b27chavdvuj4p4e5mhdmfdht6l3jik5ddf5mh37qqkpy",
+          "bytes": 7347402,
+          "sha256": "4e7752a6393ed6353a3a6cdb58e11c365891263c8ec414c8bf1c3d9f1675c92b",
+          "content_type": "application/vnd.apache.parquet",
+          "retry_after": null,
+          "seconds": 2.3,
+          "attempt": 1
+        }
+      ],
+      "artifact": "ownership_signals",
+      "cid": "bafybeic7nns2d5b27chavdvuj4p4e5mhdmfdht6l3jik5ddf5mh37qqkpy",
+      "gating": false
+    },
+    {
+      "gateway": "https://gateway.pinata.cloud",
+      "url": "https://gateway.pinata.cloud/ipfs/bafkreia4lkjwvg3yryug4f2beetf46rynrholzhhmj255ouhxuvq2qybbi",
+      "ok": true,
+      "status": 200,
+      "checked_at": "2026-10-26T03:29:36.956Z",
+      "bytes": 24115,
+      "sha256_match": true,
+      "size_match": true,
+      "error": null,
+      "retry_after": null,
+      "attempts": [
+        {
+          "url": "https://gateway.pinata.cloud/ipfs/bafkreia4lkjwvg3yryug4f2beetf46rynrholzhhmj255ouhxuvq2qybbi",
+          "checked_at": "2026-10-26T03:29:36.956Z",
+          "status": 200,
+          "final_url": "https://gateway.pinata.cloud/ipfs/bafkreia4lkjwvg3yryug4f2beetf46rynrholzhhmj255ouhxuvq2qybbi",
+          "bytes": 24115,
+          "sha256": "1c5a936a9b788e286e174121265e7a386c4ee5e4e76275deba87bd2b0d43010a",
+          "content_type": "application/vnd.apache.parquet",
+          "retry_after": null,
+          "seconds": 5.6,
+          "attempt": 1
+        }
+      ],
+      "artifact": "etrakit_permit_facts",
+      "cid": "bafkreia4lkjwvg3yryug4f2beetf46rynrholzhhmj255ouhxuvq2qybbi",
+      "gating": true
+    },
+    {
+      "gateway": "https://dget.top",
+      "url": "https://dget.top/ipfs/bafkreia4lkjwvg3yryug4f2beetf46rynrholzhhmj255ouhxuvq2qybbi",
+      "ok": true,
+      "status": 200,
+      "checked_at": "2026-10-26T03:29:42.653Z",
+      "bytes": 24115,
+      "sha256_match": true,
+      "size_match": true,
+      "error": null,
+      "retry_after": null,
+      "attempts": [
+        {
+          "url": "https://dget.top/ipfs/bafkreia4lkjwvg3yryug4f2beetf46rynrholzhhmj255ouhxuvq2qybbi",
+          "checked_at": "2026-10-26T03:29:42.653Z",
+          "status": 200,
+          "final_url": "https://bafkreia4lkjwvg3yryug4f2beetf46rynrholzhhmj255ouhxuvq2qybbi.ipfs.dget.top/",
+          "bytes": 24115,
+          "sha256": "1c5a936a9b788e286e174121265e7a386c4ee5e4e76275deba87bd2b0d43010a",
+          "content_type": "application/vnd.apache.parquet",
+          "retry_after": null,
+          "seconds": 2.4,
+          "attempt": 1
+        }
+      ],
+      "artifact": "etrakit_permit_facts",
+      "cid": "bafkreia4lkjwvg3yryug4f2beetf46rynrholzhhmj255ouhxuvq2qybbi",
+      "gating": true
+    },
+    {
+      "gateway": "https://ipfs.io",
+      "url": "https://ipfs.io/ipfs/bafkreia4lkjwvg3yryug4f2beetf46rynrholzhhmj255ouhxuvq2qybbi",
+      "ok": false,
+      "status": 429,
+      "checked_at": "2026-10-26T03:29:45.098Z",
+      "bytes": 188,
+      "sha256_match": false,
+      "size_match": false,
+      "error": null,
+      "retry_after": "900",
+      "attempts": [
+        {
+          "url": "https://ipfs.io/ipfs/bafkreia4lkjwvg3yryug4f2beetf46rynrholzhhmj255ouhxuvq2qybbi",
+          "checked_at": "2026-10-26T03:29:45.098Z",
+          "status": 429,
+          "final_url": "https://ipfs.io/ipfs/bafkreia4lkjwvg3yryug4f2beetf46rynrholzhhmj255ouhxuvq2qybbi",
+          "bytes": 188,
+          "sha256": "9ab627135c70dbafbcba4bcdba5567472f93b3bc809cff20199e9b3ea0c205cb",
+          "content_type": "text/plain; charset=utf-8",
+          "retry_after": "900",
+          "body_snippet": "(non-200 body, hash omitted)",
+          "seconds": 0.1,
+          "attempt": 1
+        }
+      ],
+      "artifact": "etrakit_permit_facts",
+      "cid": "bafkreia4lkjwvg3yryug4f2beetf46rynrholzhhmj255ouhxuvq2qybbi",
+      "gating": false
+    },
+    {
+      "gateway": "https://dweb.link",
+      "url": "https://dweb.link/ipfs/bafkreia4lkjwvg3yryug4f2beetf46rynrholzhhmj255ouhxuvq2qybbi",
+      "ok": false,
+      "status": 429,
+      "checked_at": "2026-10-26T03:29:45.269Z",
+      "bytes": 188,
+      "sha256_match": false,
+      "size_match": false,
+      "error": null,
+      "retry_after": "900",
+      "attempts": [
+        {
+          "url": "https://dweb.link/ipfs/bafkreia4lkjwvg3yryug4f2beetf46rynrholzhhmj255ouhxuvq2qybbi",
+          "checked_at": "2026-10-26T03:29:45.269Z",
+          "status": 429,
+          "final_url": "https://dweb.link/ipfs/bafkreia4lkjwvg3yryug4f2beetf46rynrholzhhmj255ouhxuvq2qybbi",
+          "bytes": 188,
+          "sha256": "9ab627135c70dbafbcba4bcdba5567472f93b3bc809cff20199e9b3ea0c205cb",
+          "content_type": "text/plain; charset=utf-8",
+          "retry_after": "900",
+          "body_snippet": "(non-200 body, hash omitted)",
+          "seconds": 0.1,
+          "attempt": 1
+        }
+      ],
+      "artifact": "etrakit_permit_facts",
+      "cid": "bafkreia4lkjwvg3yryug4f2beetf46rynrholzhhmj255ouhxuvq2qybbi",
+      "gating": false
+    },
+    {
+      "gateway": "https://ipfs.filebase.io",
+      "url": "https://ipfs.filebase.io/ipfs/bafkreia4lkjwvg3yryug4f2beetf46rynrholzhhmj255ouhxuvq2qybbi",
+      "ok": true,
+      "status": 200,
+      "checked_at": "2026-10-26T03:29:45.417Z",
+      "bytes": 24115,
+      "sha256_match": true,
+      "size_match": true,
+      "error": null,
+      "retry_after": null,
+      "attempts": [
+        {
+          "url": "https://ipfs.filebase.io/ipfs/bafkreia4lkjwvg3yryug4f2beetf46rynrholzhhmj255ouhxuvq2qybbi",
+          "checked_at": "2026-10-26T03:29:45.417Z",
+          "status": 200,
+          "final_url": "https://ipfs.filebase.io/ipfs/bafkreia4lkjwvg3yryug4f2beetf46rynrholzhhmj255ouhxuvq2qybbi",
+          "bytes": 24115,
+          "sha256": "1c5a936a9b788e286e174121265e7a386c4ee5e4e76275deba87bd2b0d43010a",
+          "content_type": "application/vnd.apache.parquet",
+          "retry_after": null,
+          "seconds": 0.4,
+          "attempt": 1
+        }
+      ],
+      "artifact": "etrakit_permit_facts",
+      "cid": "bafkreia4lkjwvg3yryug4f2beetf46rynrholzhhmj255ouhxuvq2qybbi",
+      "gating": false
+    },
+    {
+      "gateway": "https://gateway.pinata.cloud",
+      "url": "https://gateway.pinata.cloud/ipfs/bafkreid3h7ze6orsoaloshagn4vsm5y6bfqoqhkb37pap7telumzdfllju",
+      "ok": true,
+      "status": 200,
+      "checked_at": "2026-10-26T03:29:45.908Z",
+      "bytes": 4809,
+      "sha256_match": true,
+      "size_match": true,
+      "error": null,
+      "retry_after": null,
+      "attempts": [
+        {
+          "url": "https://gateway.pinata.cloud/ipfs/bafkreid3h7ze6orsoaloshagn4vsm5y6bfqoqhkb37pap7telumzdfllju",
+          "checked_at": "2026-10-26T03:29:45.908Z",
+          "status": 200,
+          "final_url": "https://gateway.pinata.cloud/ipfs/bafkreid3h7ze6orsoaloshagn4vsm5y6bfqoqhkb37pap7telumzdfllju",
+          "bytes": 4809,
+          "sha256": "7b3ff24f3a327016e91c066f2b26771e0960e81d41dfde07fe645d1991956b4d",
+          "content_type": "application/vnd.apache.parquet",
+          "retry_after": null,
+          "seconds": 7.8,
+          "attempt": 1
+        }
+      ],
+      "artifact": "etrakit_permit_property_link",
+      "cid": "bafkreid3h7ze6orsoaloshagn4vsm5y6bfqoqhkb37pap7telumzdfllju",
+      "gating": true
+    },
+    {
+      "gateway": "https://dget.top",
+      "url": "https://dget.top/ipfs/bafkreid3h7ze6orsoaloshagn4vsm5y6bfqoqhkb37pap7telumzdfllju",
+      "ok": true,
+      "status": 200,
+      "checked_at": "2026-10-26T03:29:53.831Z",
+      "bytes": 4809,
+      "sha256_match": true,
+      "size_match": true,
+      "error": null,
+      "retry_after": null,
+      "attempts": [
+        {
+          "url": "https://dget.top/ipfs/bafkreid3h7ze6orsoaloshagn4vsm5y6bfqoqhkb37pap7telumzdfllju",
+          "checked_at": "2026-10-26T03:29:53.831Z",
+          "status": 200,
+          "final_url": "https://bafkreid3h7ze6orsoaloshagn4vsm5y6bfqoqhkb37pap7telumzdfllju.ipfs.dget.top/",
+          "bytes": 4809,
+          "sha256": "7b3ff24f3a327016e91c066f2b26771e0960e81d41dfde07fe645d1991956b4d",
+          "content_type": "application/vnd.apache.parquet",
+          "retry_after": null,
+          "seconds": 0.6,
+          "attempt": 1
+        }
+      ],
+      "artifact": "etrakit_permit_property_link",
+      "cid": "bafkreid3h7ze6orsoaloshagn4vsm5y6bfqoqhkb37pap7telumzdfllju",
+      "gating": true
+    },
+    {
+      "gateway": "https://ipfs.io",
+      "url": "https://ipfs.io/ipfs/bafkreid3h7ze6orsoaloshagn4vsm5y6bfqoqhkb37pap7telumzdfllju",
+      "ok": false,
+      "status": 429,
+      "checked_at": "2026-10-26T03:29:54.496Z",
+      "bytes": 188,
+      "sha256_match": false,
+      "size_match": false,
+      "error": null,
+      "retry_after": "900",
+      "attempts": [
+        {
+          "url": "https://ipfs.io/ipfs/bafkreid3h7ze6orsoaloshagn4vsm5y6bfqoqhkb37pap7telumzdfllju",
+          "checked_at": "2026-10-26T03:29:54.496Z",
+          "status": 429,
+          "final_url": "https://ipfs.io/ipfs/bafkreid3h7ze6orsoaloshagn4vsm5y6bfqoqhkb37pap7telumzdfllju",
+          "bytes": 188,
+          "sha256": "b554fd1e7e0ca298bb0576a934422a492d5abf4d7297644a5df9a47fd90c460a",
+          "content_type": "text/plain; charset=utf-8",
+          "retry_after": "900",
+          "body_snippet": "(non-200 body, hash omitted)",
+          "seconds": 0.1,
+          "attempt": 1
+        }
+      ],
+      "artifact": "etrakit_permit_property_link",
+      "cid": "bafkreid3h7ze6orsoaloshagn4vsm5y6bfqoqhkb37pap7telumzdfllju",
+      "gating": false
+    },
+    {
+      "gateway": "https://dweb.link",
+      "url": "https://dweb.link/ipfs/bafkreid3h7ze6orsoaloshagn4vsm5y6bfqoqhkb37pap7telumzdfllju",
+      "ok": false,
+      "status": 429,
+      "checked_at": "2026-10-26T03:29:54.657Z",
+      "bytes": 188,
+      "sha256_match": false,
+      "size_match": false,
+      "error": null,
+      "retry_after": "900",
+      "attempts": [
+        {
+          "url": "https://dweb.link/ipfs/bafkreid3h7ze6orsoaloshagn4vsm5y6bfqoqhkb37pap7telumzdfllju",
+          "checked_at": "2026-10-26T03:29:54.657Z",
+          "status": 429,
+          "final_url": "https://dweb.link/ipfs/bafkreid3h7ze6orsoaloshagn4vsm5y6bfqoqhkb37pap7telumzdfllju",
+          "bytes": 188,
+          "sha256": "b554fd1e7e0ca298bb0576a934422a492d5abf4d7297644a5df9a47fd90c460a",
+          "content_type": "text/plain; charset=utf-8",
+          "retry_after": "900",
+          "body_snippet": "(non-200 body, hash omitted)",
+          "seconds": 0.1,
+          "attempt": 1
+        }
+      ],
+      "artifact": "etrakit_permit_property_link",
+      "cid": "bafkreid3h7ze6orsoaloshagn4vsm5y6bfqoqhkb37pap7telumzdfllju",
+      "gating": false
+    },
+    {
+      "gateway": "https://ipfs.filebase.io",
+      "url": "https://ipfs.filebase.io/ipfs/bafkreid3h7ze6orsoaloshagn4vsm5y6bfqoqhkb37pap7telumzdfllju",
+      "ok": true,
+      "status": 200,
+      "checked_at": "2026-10-26T03:29:54.805Z",
+      "bytes": 4809,
+      "sha256_match": true,
+      "size_match": true,
+      "error": null,
+      "retry_after": null,
+      "attempts": [
+        {
+          "url": "https://ipfs.filebase.io/ipfs/bafkreid3h7ze6orsoaloshagn4vsm5y6bfqoqhkb37pap7telumzdfllju",
+          "checked_at": "2026-10-26T03:29:54.805Z",
+          "status": 200,
+          "final_url": "https://ipfs.filebase.io/ipfs/bafkreid3h7ze6orsoaloshagn4vsm5y6bfqoqhkb37pap7telumzdfllju",
+          "bytes": 4809,
+          "sha256": "7b3ff24f3a327016e91c066f2b26771e0960e81d41dfde07fe645d1991956b4d",
+          "content_type": "application/vnd.apache.parquet",
+          "retry_after": null,
+          "seconds": 0.3,
+          "attempt": 1
+        }
+      ],
+      "artifact": "etrakit_permit_property_link",
+      "cid": "bafkreid3h7ze6orsoaloshagn4vsm5y6bfqoqhkb37pap7telumzdfllju",
+      "gating": false
+    },
+    {
+      "gateway": "https://gateway.pinata.cloud",
+      "url": "https://gateway.pinata.cloud/ipfs/bafybeiaqwo4fjwjmqe7rwpq3dr5ufmauhxfdpfptw2xwy7svmv7ful5fuu",
+      "ok": true,
+      "status": 200,
+      "checked_at": "2026-10-26T03:29:55.183Z",
+      "bytes": 8486457,
+      "sha256_match": true,
+      "size_match": true,
+      "error": null,
+      "retry_after": null,
+      "attempts": [
+        {
+          "url": "https://gateway.pinata.cloud/ipfs/bafybeiaqwo4fjwjmqe7rwpq3dr5ufmauhxfdpfptw2xwy7svmv7ful5fuu",
+          "checked_at": "2026-10-26T03:29:55.183Z",
+          "status": 200,
+          "final_url": "https://gateway.pinata.cloud/ipfs/bafybeiaqwo4fjwjmqe7rwpq3dr5ufmauhxfdpfptw2xwy7svmv7ful5fuu",
+          "bytes": 8486457,
+          "sha256": "62b5fadb54d0026c84298b3a665c8cbe7e47f264e11a309fdc0556c445f9c70f",
+          "content_type": "application/vnd.apache.parquet",
+          "retry_after": null,
+          "seconds": 6.3,
+          "attempt": 1
+        }
+      ],
+      "artifact": "overture_places",
+      "cid": "bafybeiaqwo4fjwjmqe7rwpq3dr5ufmauhxfdpfptw2xwy7svmv7ful5fuu",
+      "gating": true
+    },
+    {
+      "gateway": "https://dget.top",
+      "url": "https://dget.top/ipfs/bafybeiaqwo4fjwjmqe7rwpq3dr5ufmauhxfdpfptw2xwy7svmv7ful5fuu",
+      "ok": true,
+      "status": 200,
+      "checked_at": "2026-10-26T03:30:01.563Z",
+      "bytes": 8486457,
+      "sha256_match": true,
+      "size_match": true,
+      "error": null,
+      "retry_after": null,
+      "attempts": [
+        {
+          "url": "https://dget.top/ipfs/bafybeiaqwo4fjwjmqe7rwpq3dr5ufmauhxfdpfptw2xwy7svmv7ful5fuu",
+          "checked_at": "2026-10-26T03:30:01.563Z",
+          "status": 200,
+          "final_url": "https://bafybeiaqwo4fjwjmqe7rwpq3dr5ufmauhxfdpfptw2xwy7svmv7ful5fuu.ipfs.dget.top/",
+          "bytes": 8486457,
+          "sha256": "62b5fadb54d0026c84298b3a665c8cbe7e47f264e11a309fdc0556c445f9c70f",
+          "content_type": "application/vnd.apache.parquet",
+          "retry_after": null,
+          "seconds": 2.6,
+          "attempt": 1
+        }
+      ],
+      "artifact": "overture_places",
+      "cid": "bafybeiaqwo4fjwjmqe7rwpq3dr5ufmauhxfdpfptw2xwy7svmv7ful5fuu",
+      "gating": true
+    },
+    {
+      "gateway": "https://ipfs.io",
+      "url": "https://ipfs.io/ipfs/bafybeiaqwo4fjwjmqe7rwpq3dr5ufmauhxfdpfptw2xwy7svmv7ful5fuu",
+      "ok": false,
+      "status": 429,
+      "checked_at": "2026-10-26T03:30:04.231Z",
+      "bytes": 188,
+      "sha256_match": false,
+      "size_match": false,
+      "error": null,
+      "retry_after": "900",
+      "attempts": [
+        {
+          "url": "https://ipfs.io/ipfs/bafybeiaqwo4fjwjmqe7rwpq3dr5ufmauhxfdpfptw2xwy7svmv7ful5fuu",
+          "checked_at": "2026-10-26T03:30:04.231Z",
+          "status": 429,
+          "final_url": "https://ipfs.io/ipfs/bafybeiaqwo4fjwjmqe7rwpq3dr5ufmauhxfdpfptw2xwy7svmv7ful5fuu",
+          "bytes": 188,
+          "sha256": "f22212b88a74880eff5a0260321b7a5acd350c59cb60f9a0a66af51fe255adbf",
+          "content_type": "text/plain; charset=utf-8",
+          "retry_after": "900",
+          "body_snippet": "(non-200 body, hash omitted)",
+          "seconds": 0.1,
+          "attempt": 1
+        }
+      ],
+      "artifact": "overture_places",
+      "cid": "bafybeiaqwo4fjwjmqe7rwpq3dr5ufmauhxfdpfptw2xwy7svmv7ful5fuu",
+      "gating": false
+    },
+    {
+      "gateway": "https://dweb.link",
+      "url": "https://dweb.link/ipfs/bafybeiaqwo4fjwjmqe7rwpq3dr5ufmauhxfdpfptw2xwy7svmv7ful5fuu",
+      "ok": false,
+      "status": 429,
+      "checked_at": "2026-10-26T03:30:04.388Z",
+      "bytes": 188,
+      "sha256_match": false,
+      "size_match": false,
+      "error": null,
+      "retry_after": "900",
+      "attempts": [
+        {
+          "url": "https://dweb.link/ipfs/bafybeiaqwo4fjwjmqe7rwpq3dr5ufmauhxfdpfptw2xwy7svmv7ful5fuu",
+          "checked_at": "2026-10-26T03:30:04.388Z",
+          "status": 429,
+          "final_url": "https://dweb.link/ipfs/bafybeiaqwo4fjwjmqe7rwpq3dr5ufmauhxfdpfptw2xwy7svmv7ful5fuu",
+          "bytes": 188,
+          "sha256": "f22212b88a74880eff5a0260321b7a5acd350c59cb60f9a0a66af51fe255adbf",
+          "content_type": "text/plain; charset=utf-8",
+          "retry_after": "900",
+          "body_snippet": "(non-200 body, hash omitted)",
+          "seconds": 0.1,
+          "attempt": 1
+        }
+      ],
+      "artifact": "overture_places",
+      "cid": "bafybeiaqwo4fjwjmqe7rwpq3dr5ufmauhxfdpfptw2xwy7svmv7ful5fuu",
+      "gating": false
+    },
+    {
+      "gateway": "https://ipfs.filebase.io",
+      "url": "https://ipfs.filebase.io/ipfs/bafybeiaqwo4fjwjmqe7rwpq3dr5ufmauhxfdpfptw2xwy7svmv7ful5fuu",
+      "ok": true,
+      "status": 200,
+      "checked_at": "2026-10-26T03:30:04.549Z",
+      "bytes": 8486457,
+      "sha256_match": true,
+      "size_match": true,
+      "error": null,
+      "retry_after": null,
+      "attempts": [
+        {
+          "url": "https://ipfs.filebase.io/ipfs/bafybeiaqwo4fjwjmqe7rwpq3dr5ufmauhxfdpfptw2xwy7svmv7ful5fuu",
+          "checked_at": "2026-10-26T03:30:04.549Z",
+          "status": 200,
+          "final_url": "https://ipfs.filebase.io/ipfs/bafybeiaqwo4fjwjmqe7rwpq3dr5ufmauhxfdpfptw2xwy7svmv7ful5fuu",
+          "bytes": 8486457,
+          "sha256": "62b5fadb54d0026c84298b3a665c8cbe7e47f264e11a309fdc0556c445f9c70f",
+          "content_type": "application/vnd.apache.parquet",
+          "retry_after": null,
+          "seconds": 2,
+          "attempt": 1
+        }
+      ],
+      "artifact": "overture_places",
+      "cid": "bafybeiaqwo4fjwjmqe7rwpq3dr5ufmauhxfdpfptw2xwy7svmv7ful5fuu",
+      "gating": false
+    },
+    {
+      "gateway": "https://gateway.pinata.cloud",
+      "url": "https://gateway.pinata.cloud/ipfs/bafybeibzexu7cbxzqmzpj45xpqoo6pknz5xflj2nnqiacdzjkuvoom5xpm",
+      "ok": true,
+      "status": 200,
+      "checked_at": "2026-10-26T03:30:06.639Z",
+      "bytes": 28086054,
+      "sha256_match": true,
+      "size_match": true,
+      "error": null,
+      "retry_after": null,
+      "attempts": [
+        {
+          "url": "https://gateway.pinata.cloud/ipfs/bafybeibzexu7cbxzqmzpj45xpqoo6pknz5xflj2nnqiacdzjkuvoom5xpm",
+          "checked_at": "2026-10-26T03:30:06.639Z",
+          "status": 200,
+          "final_url": "https://gateway.pinata.cloud/ipfs/bafybeibzexu7cbxzqmzpj45xpqoo6pknz5xflj2nnqiacdzjkuvoom5xpm",
+          "bytes": 28086054,
+          "sha256": "2f90730a4f6eb2db66a14cce935fc6e90ca20ddd77be61154f6ee7671bc98347",
+          "content_type": "application/vnd.apache.parquet",
+          "retry_after": null,
+          "seconds": 10.7,
+          "attempt": 1
+        }
+      ],
+      "artifact": "corporations",
+      "cid": "bafybeibzexu7cbxzqmzpj45xpqoo6pknz5xflj2nnqiacdzjkuvoom5xpm",
+      "gating": true
+    },
+    {
+      "gateway": "https://dget.top",
+      "url": "https://dget.top/ipfs/bafybeibzexu7cbxzqmzpj45xpqoo6pknz5xflj2nnqiacdzjkuvoom5xpm",
+      "ok": true,
+      "status": 200,
+      "checked_at": "2026-10-26T03:30:17.434Z",
+      "bytes": 28086054,
+      "sha256_match": true,
+      "size_match": true,
+      "error": null,
+      "retry_after": null,
+      "attempts": [
+        {
+          "url": "https://dget.top/ipfs/bafybeibzexu7cbxzqmzpj45xpqoo6pknz5xflj2nnqiacdzjkuvoom5xpm",
+          "checked_at": "2026-10-26T03:30:17.434Z",
+          "status": 200,
+          "final_url": "https://bafybeibzexu7cbxzqmzpj45xpqoo6pknz5xflj2nnqiacdzjkuvoom5xpm.ipfs.dget.top/",
+          "bytes": 28086054,
+          "sha256": "2f90730a4f6eb2db66a14cce935fc6e90ca20ddd77be61154f6ee7671bc98347",
+          "content_type": "application/vnd.apache.parquet",
+          "retry_after": null,
+          "seconds": 6.1,
+          "attempt": 1
+        }
+      ],
+      "artifact": "corporations",
+      "cid": "bafybeibzexu7cbxzqmzpj45xpqoo6pknz5xflj2nnqiacdzjkuvoom5xpm",
+      "gating": true
+    },
+    {
+      "gateway": "https://ipfs.io",
+      "url": "https://ipfs.io/ipfs/bafybeibzexu7cbxzqmzpj45xpqoo6pknz5xflj2nnqiacdzjkuvoom5xpm",
+      "ok": false,
+      "status": 429,
+      "checked_at": "2026-10-26T03:30:23.585Z",
+      "bytes": 188,
+      "sha256_match": false,
+      "size_match": false,
+      "error": null,
+      "retry_after": "900",
+      "attempts": [
+        {
+          "url": "https://ipfs.io/ipfs/bafybeibzexu7cbxzqmzpj45xpqoo6pknz5xflj2nnqiacdzjkuvoom5xpm",
+          "checked_at": "2026-10-26T03:30:23.585Z",
+          "status": 429,
+          "final_url": "https://ipfs.io/ipfs/bafybeibzexu7cbxzqmzpj45xpqoo6pknz5xflj2nnqiacdzjkuvoom5xpm",
+          "bytes": 188,
+          "sha256": "f23370b5647ea3940083a941d07a38b89e7b761a4faf6f8071aaded9d34d44be",
+          "content_type": "text/plain; charset=utf-8",
+          "retry_after": "900",
+          "body_snippet": "(non-200 body, hash omitted)",
+          "seconds": 0.1,
+          "attempt": 1
+        }
+      ],
+      "artifact": "corporations",
+      "cid": "bafybeibzexu7cbxzqmzpj45xpqoo6pknz5xflj2nnqiacdzjkuvoom5xpm",
+      "gating": false
+    },
+    {
+      "gateway": "https://dweb.link",
+      "url": "https://dweb.link/ipfs/bafybeibzexu7cbxzqmzpj45xpqoo6pknz5xflj2nnqiacdzjkuvoom5xpm",
+      "ok": false,
+      "status": 429,
+      "checked_at": "2026-10-26T03:30:23.740Z",
+      "bytes": 188,
+      "sha256_match": false,
+      "size_match": false,
+      "error": null,
+      "retry_after": "900",
+      "attempts": [
+        {
+          "url": "https://dweb.link/ipfs/bafybeibzexu7cbxzqmzpj45xpqoo6pknz5xflj2nnqiacdzjkuvoom5xpm",
+          "checked_at": "2026-10-26T03:30:23.740Z",
+          "status": 429,
+          "final_url": "https://dweb.link/ipfs/bafybeibzexu7cbxzqmzpj45xpqoo6pknz5xflj2nnqiacdzjkuvoom5xpm",
+          "bytes": 188,
+          "sha256": "f23370b5647ea3940083a941d07a38b89e7b761a4faf6f8071aaded9d34d44be",
+          "content_type": "text/plain; charset=utf-8",
+          "retry_after": "900",
+          "body_snippet": "(non-200 body, hash omitted)",
+          "seconds": 0.1,
+          "attempt": 1
+        }
+      ],
+      "artifact": "corporations",
+      "cid": "bafybeibzexu7cbxzqmzpj45xpqoo6pknz5xflj2nnqiacdzjkuvoom5xpm",
+      "gating": false
+    },
+    {
+      "gateway": "https://ipfs.filebase.io",
+      "url": "https://ipfs.filebase.io/ipfs/bafybeibzexu7cbxzqmzpj45xpqoo6pknz5xflj2nnqiacdzjkuvoom5xpm",
+      "ok": true,
+      "status": 200,
+      "checked_at": "2026-10-26T03:30:23.912Z",
+      "bytes": 28086054,
+      "sha256_match": true,
+      "size_match": true,
+      "error": null,
+      "retry_after": null,
+      "attempts": [
+        {
+          "url": "https://ipfs.filebase.io/ipfs/bafybeibzexu7cbxzqmzpj45xpqoo6pknz5xflj2nnqiacdzjkuvoom5xpm",
+          "checked_at": "2026-10-26T03:30:23.912Z",
+          "status": 200,
+          "final_url": "https://ipfs.filebase.io/ipfs/bafybeibzexu7cbxzqmzpj45xpqoo6pknz5xflj2nnqiacdzjkuvoom5xpm",
+          "bytes": 28086054,
+          "sha256": "2f90730a4f6eb2db66a14cce935fc6e90ca20ddd77be61154f6ee7671bc98347",
+          "content_type": "application/vnd.apache.parquet",
+          "retry_after": null,
+          "seconds": 8.4,
+          "attempt": 1
+        }
+      ],
+      "artifact": "corporations",
+      "cid": "bafybeibzexu7cbxzqmzpj45xpqoo6pknz5xflj2nnqiacdzjkuvoom5xpm",
+      "gating": false
+    },
+    {
+      "gateway": "https://gateway.pinata.cloud",
+      "url": "https://gateway.pinata.cloud/ipfs/bafkreiehxaagcvmehr5m22ryqxp4ffh6p23vc5ryuaapw3jhkyw3feybim",
+      "ok": true,
+      "status": 200,
+      "checked_at": "2026-10-26T03:30:32.384Z",
+      "bytes": 14087,
+      "sha256_match": true,
+      "size_match": true,
+      "error": null,
+      "retry_after": null,
+      "attempts": [
+        {
+          "url": "https://gateway.pinata.cloud/ipfs/bafkreiehxaagcvmehr5m22ryqxp4ffh6p23vc5ryuaapw3jhkyw3feybim",
+          "checked_at": "2026-10-26T03:30:32.384Z",
+          "status": 200,
+          "final_url": "https://gateway.pinata.cloud/ipfs/bafkreiehxaagcvmehr5m22ryqxp4ffh6p23vc5ryuaapw3jhkyw3feybim",
+          "bytes": 14087,
+          "sha256": "87b8006155843c7acd6a3885dfc294fe7eb7517638a000fb6d27562db2930143",
+          "content_type": "application/vnd.apache.parquet",
+          "retry_after": null,
+          "seconds": 6.3,
+          "attempt": 1
+        }
+      ],
+      "artifact": "pipeline_runs",
+      "cid": "bafkreiehxaagcvmehr5m22ryqxp4ffh6p23vc5ryuaapw3jhkyw3feybim",
+      "gating": true
+    },
+    {
+      "gateway": "https://dget.top",
+      "url": "https://dget.top/ipfs/bafkreiehxaagcvmehr5m22ryqxp4ffh6p23vc5ryuaapw3jhkyw3feybim",
+      "ok": true,
+      "status": 200,
+      "checked_at": "2026-10-26T03:30:38.737Z",
+      "bytes": 14087,
+      "sha256_match": true,
+      "size_match": true,
+      "error": null,
+      "retry_after": null,
+      "attempts": [
+        {
+          "url": "https://dget.top/ipfs/bafkreiehxaagcvmehr5m22ryqxp4ffh6p23vc5ryuaapw3jhkyw3feybim",
+          "checked_at": "2026-10-26T03:30:38.737Z",
+          "status": 200,
+          "final_url": "https://bafkreiehxaagcvmehr5m22ryqxp4ffh6p23vc5ryuaapw3jhkyw3feybim.ipfs.dget.top/",
+          "bytes": 14087,
+          "sha256": "87b8006155843c7acd6a3885dfc294fe7eb7517638a000fb6d27562db2930143",
+          "content_type": "application/vnd.apache.parquet",
+          "retry_after": null,
+          "seconds": 0.3,
+          "attempt": 1
+        }
+      ],
+      "artifact": "pipeline_runs",
+      "cid": "bafkreiehxaagcvmehr5m22ryqxp4ffh6p23vc5ryuaapw3jhkyw3feybim",
+      "gating": true
+    },
+    {
+      "gateway": "https://ipfs.io",
+      "url": "https://ipfs.io/ipfs/bafkreiehxaagcvmehr5m22ryqxp4ffh6p23vc5ryuaapw3jhkyw3feybim",
+      "ok": false,
+      "status": 429,
+      "checked_at": "2026-10-26T03:30:39.143Z",
+      "bytes": 188,
+      "sha256_match": false,
+      "size_match": false,
+      "error": null,
+      "retry_after": "900",
+      "attempts": [
+        {
+          "url": "https://ipfs.io/ipfs/bafkreiehxaagcvmehr5m22ryqxp4ffh6p23vc5ryuaapw3jhkyw3feybim",
+          "checked_at": "2026-10-26T03:30:39.143Z",
+          "status": 429,
+          "final_url": "https://ipfs.io/ipfs/bafkreiehxaagcvmehr5m22ryqxp4ffh6p23vc5ryuaapw3jhkyw3feybim",
+          "bytes": 188,
+          "sha256": "bf67b3d75e308d036d245b8443c6b343503a9f4004b49b9737fdc073ef6d0c8a",
+          "content_type": "text/plain; charset=utf-8",
+          "retry_after": "900",
+          "body_snippet": "(non-200 body, hash omitted)",
+          "seconds": 0.1,
+          "attempt": 1
+        }
+      ],
+      "artifact": "pipeline_runs",
+      "cid": "bafkreiehxaagcvmehr5m22ryqxp4ffh6p23vc5ryuaapw3jhkyw3feybim",
+      "gating": false
+    },
+    {
+      "gateway": "https://dweb.link",
+      "url": "https://dweb.link/ipfs/bafkreiehxaagcvmehr5m22ryqxp4ffh6p23vc5ryuaapw3jhkyw3feybim",
+      "ok": false,
+      "status": 429,
+      "checked_at": "2026-10-26T03:30:39.295Z",
+      "bytes": 188,
+      "sha256_match": false,
+      "size_match": false,
+      "error": null,
+      "retry_after": "900",
+      "attempts": [
+        {
+          "url": "https://dweb.link/ipfs/bafkreiehxaagcvmehr5m22ryqxp4ffh6p23vc5ryuaapw3jhkyw3feybim",
+          "checked_at": "2026-10-26T03:30:39.295Z",
+          "status": 429,
+          "final_url": "https://dweb.link/ipfs/bafkreiehxaagcvmehr5m22ryqxp4ffh6p23vc5ryuaapw3jhkyw3feybim",
+          "bytes": 188,
+          "sha256": "bf67b3d75e308d036d245b8443c6b343503a9f4004b49b9737fdc073ef6d0c8a",
+          "content_type": "text/plain; charset=utf-8",
+          "retry_after": "900",
+          "body_snippet": "(non-200 body, hash omitted)",
+          "seconds": 0.1,
+          "attempt": 1
+        }
+      ],
+      "artifact": "pipeline_runs",
+      "cid": "bafkreiehxaagcvmehr5m22ryqxp4ffh6p23vc5ryuaapw3jhkyw3feybim",
+      "gating": false
+    },
+    {
+      "gateway": "https://ipfs.filebase.io",
+      "url": "https://ipfs.filebase.io/ipfs/bafkreiehxaagcvmehr5m22ryqxp4ffh6p23vc5ryuaapw3jhkyw3feybim",
+      "ok": true,
+      "status": 200,
+      "checked_at": "2026-10-26T03:30:39.451Z",
+      "bytes": 14087,
+      "sha256_match": true,
+      "size_match": true,
+      "error": null,
+      "retry_after": null,
+      "attempts": [
+        {
+          "url": "https://ipfs.filebase.io/ipfs/bafkreiehxaagcvmehr5m22ryqxp4ffh6p23vc5ryuaapw3jhkyw3feybim",
+          "checked_at": "2026-10-26T03:30:39.451Z",
+          "status": 200,
+          "final_url": "https://ipfs.filebase.io/ipfs/bafkreiehxaagcvmehr5m22ryqxp4ffh6p23vc5ryuaapw3jhkyw3feybim",
+          "bytes": 14087,
+          "sha256": "87b8006155843c7acd6a3885dfc294fe7eb7517638a000fb6d27562db2930143",
+          "content_type": "application/vnd.apache.parquet",
+          "retry_after": null,
+          "seconds": 0.1,
+          "attempt": 1
+        }
+      ],
+      "artifact": "pipeline_runs",
+      "cid": "bafkreiehxaagcvmehr5m22ryqxp4ffh6p23vc5ryuaapw3jhkyw3feybim",
+      "gating": false
+    },
+    {
+      "gateway": "https://gateway.pinata.cloud",
+      "url": "https://gateway.pinata.cloud/ipfs/bafkreiejx3tod3xmksfno5gpsqs2kcibgitd4wrfah6z5rz7eti4g2yc6q",
+      "ok": true,
+      "status": 200,
+      "checked_at": "2026-10-26T03:30:40.640Z",
+      "bytes": 21960,
+      "sha256_match": true,
+      "size_match": true,
+      "error": null,
+      "retry_after": null,
+      "attempts": [
+        {
+          "url": "https://gateway.pinata.cloud/ipfs/bafkreiejx3tod3xmksfno5gpsqs2kcibgitd4wrfah6z5rz7eti4g2yc6q",
+          "checked_at": "2026-10-26T03:30:40.640Z",
+          "status": 200,
+          "final_url": "https://gateway.pinata.cloud/ipfs/bafkreiejx3tod3xmksfno5gpsqs2kcibgitd4wrfah6z5rz7eti4g2yc6q",
+          "bytes": 21960,
+          "sha256": "89bee6e1eeec548ad774cf9425a5090132263e5a2501fd9ec73f24d1c36b02f4",
+          "content_type": "application/json",
+          "retry_after": null,
+          "seconds": 6.9,
+          "attempt": 1
+        }
+      ],
+      "artifact": "manifest",
+      "cid": "bafkreiejx3tod3xmksfno5gpsqs2kcibgitd4wrfah6z5rz7eti4g2yc6q",
+      "gating": true
+    },
+    {
+      "gateway": "https://dget.top",
+      "url": "https://dget.top/ipfs/bafkreiejx3tod3xmksfno5gpsqs2kcibgitd4wrfah6z5rz7eti4g2yc6q",
+      "ok": true,
+      "status": 200,
+      "checked_at": "2026-10-26T03:30:47.569Z",
+      "bytes": 21960,
+      "sha256_match": true,
+      "size_match": true,
+      "error": null,
+      "retry_after": null,
+      "attempts": [
+        {
+          "url": "https://dget.top/ipfs/bafkreiejx3tod3xmksfno5gpsqs2kcibgitd4wrfah6z5rz7eti4g2yc6q",
+          "checked_at": "2026-10-26T03:30:47.569Z",
+          "status": 200,
+          "final_url": "https://bafkreiejx3tod3xmksfno5gpsqs2kcibgitd4wrfah6z5rz7eti4g2yc6q.ipfs.dget.top/",
+          "bytes": 21960,
+          "sha256": "89bee6e1eeec548ad774cf9425a5090132263e5a2501fd9ec73f24d1c36b02f4",
+          "content_type": "application/json",
+          "retry_after": null,
+          "seconds": 2.1,
+          "attempt": 1
+        }
+      ],
+      "artifact": "manifest",
+      "cid": "bafkreiejx3tod3xmksfno5gpsqs2kcibgitd4wrfah6z5rz7eti4g2yc6q",
+      "gating": true
+    },
+    {
+      "gateway": "https://ipfs.io",
+      "url": "https://ipfs.io/ipfs/bafkreiejx3tod3xmksfno5gpsqs2kcibgitd4wrfah6z5rz7eti4g2yc6q",
+      "ok": false,
+      "status": 429,
+      "checked_at": "2026-10-26T03:30:49.738Z",
+      "bytes": 188,
+      "sha256_match": false,
+      "size_match": false,
+      "error": null,
+      "retry_after": "900",
+      "attempts": [
+        {
+          "url": "https://ipfs.io/ipfs/bafkreiejx3tod3xmksfno5gpsqs2kcibgitd4wrfah6z5rz7eti4g2yc6q",
+          "checked_at": "2026-10-26T03:30:49.738Z",
+          "status": 429,
+          "final_url": "https://ipfs.io/ipfs/bafkreiejx3tod3xmksfno5gpsqs2kcibgitd4wrfah6z5rz7eti4g2yc6q",
+          "bytes": 188,
+          "sha256": "fabf784ff083d294b124a1bab7dde1845dee7d79f801264d766380fc882de8e1",
+          "content_type": "text/plain; charset=utf-8",
+          "retry_after": "900",
+          "body_snippet": "(non-200 body, hash omitted)",
+          "seconds": 0.1,
+          "attempt": 1
+        }
+      ],
+      "artifact": "manifest",
+      "cid": "bafkreiejx3tod3xmksfno5gpsqs2kcibgitd4wrfah6z5rz7eti4g2yc6q",
+      "gating": false
+    },
+    {
+      "gateway": "https://dweb.link",
+      "url": "https://dweb.link/ipfs/bafkreiejx3tod3xmksfno5gpsqs2kcibgitd4wrfah6z5rz7eti4g2yc6q",
+      "ok": false,
+      "status": 429,
+      "checked_at": "2026-10-26T03:30:49.919Z",
+      "bytes": 188,
+      "sha256_match": false,
+      "size_match": false,
+      "error": null,
+      "retry_after": "900",
+      "attempts": [
+        {
+          "url": "https://dweb.link/ipfs/bafkreiejx3tod3xmksfno5gpsqs2kcibgitd4wrfah6z5rz7eti4g2yc6q",
+          "checked_at": "2026-10-26T03:30:49.919Z",
+          "status": 429,
+          "final_url": "https://dweb.link/ipfs/bafkreiejx3tod3xmksfno5gpsqs2kcibgitd4wrfah6z5rz7eti4g2yc6q",
+          "bytes": 188,
+          "sha256": "fabf784ff083d294b124a1bab7dde1845dee7d79f801264d766380fc882de8e1",
+          "content_type": "text/plain; charset=utf-8",
+          "retry_after": "900",
+          "body_snippet": "(non-200 body, hash omitted)",
+          "seconds": 0.1,
+          "attempt": 1
+        }
+      ],
+      "artifact": "manifest",
+      "cid": "bafkreiejx3tod3xmksfno5gpsqs2kcibgitd4wrfah6z5rz7eti4g2yc6q",
+      "gating": false
+    },
+    {
+      "gateway": "https://ipfs.filebase.io",
+      "url": "https://ipfs.filebase.io/ipfs/bafkreiejx3tod3xmksfno5gpsqs2kcibgitd4wrfah6z5rz7eti4g2yc6q",
+      "ok": true,
+      "status": 200,
+      "checked_at": "2026-10-26T03:30:50.067Z",
+      "bytes": 21960,
+      "sha256_match": true,
+      "size_match": true,
+      "error": null,
+      "retry_after": null,
+      "attempts": [
+        {
+          "url": "https://ipfs.filebase.io/ipfs/bafkreiejx3tod3xmksfno5gpsqs2kcibgitd4wrfah6z5rz7eti4g2yc6q",
+          "checked_at": "2026-10-26T03:30:50.067Z",
+          "status": 200,
+          "final_url": "https://ipfs.filebase.io/ipfs/bafkreiejx3tod3xmksfno5gpsqs2kcibgitd4wrfah6z5rz7eti4g2yc6q",
+          "bytes": 21960,
+          "sha256": "89bee6e1eeec548ad774cf9425a5090132263e5a2501fd9ec73f24d1c36b02f4",
+          "content_type": "application/json",
+          "retry_after": null,
+          "seconds": 0.3,
+          "attempt": 1
+        }
+      ],
+      "artifact": "manifest",
+      "cid": "bafkreiejx3tod3xmksfno5gpsqs2kcibgitd4wrfah6z5rz7eti4g2yc6q",
+      "gating": false
+    }
+  ],
+  "all_gating_ok": true,
+  "verified_at": "2026-10-26T03:30:39Z"
+}

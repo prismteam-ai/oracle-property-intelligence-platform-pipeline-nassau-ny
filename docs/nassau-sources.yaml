@@ -1,0 +1,1003 @@
+# Nassau County, NY source catalog (DRAFT, discovery stage only).
+# Generated 2026-10-25 from live probes; see docs/county-discovery-nassau.md.
+# Contains no credentials, connection strings, or private rows.
+county: Nassau
+state: NY
+slug: nassau
+fips: "36059"
+snapshot_time: "2026-10-25T18:40:00Z"
+status: draft-discovery
+
+parcel:
+  canonical_source: tax_roll
+  canonical_source_detail: "NYS ORPTS Property Assessment Data from Local Assessment Rolls (data.ny.gov 7vem-aaz7), Nassau roll_year 2025, county-roll SWIS only (city-roll SWIS 280500 Glen Cove and 280900 Long Beach excluded as duplicates of county-roll SWIS 280600 and 281000)"
+  tax_roll_year: 2025
+  tax_roll_status: final-as-published-on-data.ny.gov
+  assessed_parcel_count: 426460
+  assessed_roll_section_1_count: 410896
+  assessed_roll_section_5_count: 1614
+  assessed_roll_section_6_count: 2082
+  assessed_roll_section_8_count: 11868
+  gis_source: "Nassau County GIS Hosted/Parcels_2026_Clean FeatureServer layer 0 (gis.nassaucountyny.gov)"
+  gis_feature_count: 407648
+  gis_alt_source_count_layers_mapserver_1: 407500
+  nys_centroid_point_count: 423430
+  discrepancy_threshold_pct: 2.0
+  discrepancy_pct_vs_full_roll: 4.41
+  discrepancy_pct_vs_roll_section_1: 0.79
+  discrepancy_explanation: "Full county roll includes roll sections 5 (special franchise), 6 (utility) and 8 (wholly exempt) with 15564 rows that mostly have no tax-lot polygon; against taxable roll section 1 (410896) the GIS gap is 0.79 percent. Condo units are present in GIS with t_condo_building / t_condo_unit_number but may share a footprint."
+  separately_assessed_without_geometry: acknowledged
+  seed_decision: "APPROVED 2026-10-25 by operator: seed from the 2025 county roll (426460 rows); join GIS polygons and NYS centroid points by normalized SBL; keep rows without geometry (roll sections 5/6/8 and unmatched units) with null geometry."
+  identifier_proven: true
+  identifier_name: "Section-Block-Lot (SBL); NYS print_key_code; county PARID / PARCELKEY"
+  identifier_format: "print_key S.-B-L (e.g. 32.-11-211); PARID SSBBB  LLLLX (e.g. '32011  02110'); PARCELKEY 'SS BBB LLLLX' (e.g. '32 011 02110')"
+  join_rule: "print_key section -> zero-pad 2; block -> zero-pad 3 (alphanumeric blocks kept as text); lot -> zero-pad 4 plus 1-char suffix (default 0). Proven 2026-10-25: 32.-11-211 (SWIS 282001, 2 SUPERIOR RD) == PARID '32011  02110'; 1.-111-139 (6 PRESTON RD) == PARCELKEY '01 111 01390'. Always text, never digits-only."
+  appraisal_access: "Bulk REST/SODA; LRV per-parcel detail (/info/<year>/<PARID>/) is reCAPTCHA-gated for anonymous users"
+
+permits:
+  expected_jurisdiction_count: 69
+  expected_jurisdiction_basis: "3 towns (unincorporated areas) + 2 cities + 64 villages, from Nassau GIS Hosted/My_Nassau layer 6 Villages_Cities (ptype V=64, C=2; 74 U rows are unincorporated hamlets under their town)"
+  assumes_unified_countywide_history: false
+  jurisdictions:
+    - jurisdiction: "Town of Hempstead (unincorporated)"
+      key: "town-of-hempstead"
+      status: "blocked"
+      vendor: "OpenGov Permitting & Licensing (ViewpointCloud tenant hempsteadny)"
+      portal_kind: "no-public-historical-search"
+      portal: "https://hempsteadny.portal.opengov.com/"
+      historical_records: false
+      anonymous_access: false
+      adapter: "none (opengov adapter to build)"
+      implementation_status: "discovered"
+      probe: "2026-10-25 curl: api-east.viewpointcloud.com/v2/hempsteadny/record_types 200 (28 types incl. Building Permit; 26 view_access=public); /records 403 forbidden; search.viewpointcloud.com/graphql 403 Missing Authorization; portal config carries reCAPTCHA and Turnstile site keys. 2026-10-25 single Playwright check (stock headless Chromium): hempsteadny.portal.opengov.com renders 'An OpenGov portal does not exist for a community named hempsteadny'; no search box, no captcha, no login; no API calls made by the page (screenshot data/opengov_check/20261025T193354Z/01_home.png)"
+      enumeration_status: "anonymous-enumeration-forbidden"
+      known_exclusions: "Pre-OpenGov history not confirmed online; Playwright session check of portal public search is complete (2026-10-25) -- the portal page itself reports no OpenGov community exists for hempsteadny, so this jurisdiction has no working public historical search and must go through records-request instead"
+      records_request:
+        recipient_office: "Town of Hempstead Department of Buildings / Town Clerk Records Access Officer (FOIL)"
+        request_portal_url: "https://hempsteadny.gov/"
+        system_scope: "Complete issued building-permit history (roofing first) with section-block-lot, permit type, status, issue/final/close dates, contractor name and Nassau OCA license number"
+        route: "records-first"
+    - jurisdiction: "Town of North Hempstead (unincorporated)"
+      key: "town-of-north-hempstead"
+      status: "blocked"
+      vendor: "OpenGov Permitting & Licensing (tenant northhempsteadny; mytonh.com redirects here)"
+      portal_kind: "historical-search"
+      portal: "https://northhempsteadny.portal.opengov.com/"
+      historical_records: true
+      anonymous_access: false
+      adapter: "none (opengov adapter to build)"
+      implementation_status: "discovered"
+      probe: "2026-10-25 curl: record_types 200 (67 types incl. Residential Building Permit, Commercial Building Permit, Solar Panel Permit, FOIL Request - Building Department); /records 403; search graphql 403"
+      enumeration_status: "anonymous-enumeration-forbidden"
+      known_exclusions: "Pre-OpenGov records (audit doc mentions earlier Citizenserve contract) not confirmed online"
+      records_request:
+        recipient_office: "Town of North Hempstead Department of Buildings (FOIL Request - Building Department record type)"
+        request_portal_url: "https://northhempsteadny.portal.opengov.com/"
+        system_scope: "Complete issued building-permit history (roofing first) with section-block-lot, permit type, status, issue/final/close dates, contractor name and Nassau OCA license number"
+        route: "api-first"
+    - jurisdiction: "Town of Oyster Bay (unincorporated)"
+      key: "town-of-oyster-bay"
+      status: "blocked"
+      vendor: "CentralSquare eTRAKiT (oys-trk.aspgov.com)"
+      portal_kind: "historical-search"
+      portal: "https://oys-trk.aspgov.com/eTRAKiT/"
+      historical_records: true
+      anonymous_access: false
+      adapter: "none (etrakit adapter to build)"
+      implementation_status: "discovered"
+      probe: "2026-10-25 curl: /eTRAKiT/ 200 (2.7s, 1.37MB); /Search/permit.aspx 302 to login.aspx?lt=either (Public or Contractor login); public self-registration offered; no CAPTCHA marker; login page lists 10,503 registered contractor accounts"
+      enumeration_status: "login-required"
+      known_exclusions: "Requires a human-created public account and terms review before automated search"
+      throughput: "unmeasured (login required)"
+      records_request:
+        recipient_office: "Town of Oyster Bay Department of Planning and Development, Building Division"
+        request_portal_url: "https://oysterbaytown.com/departments/planning-and-development/building-portal/"
+        system_scope: "Complete issued building-permit history (roofing first) with section-block-lot, permit type, status, issue/final/close dates, contractor name and Nassau OCA license number"
+        route: "api-first"
+    - jurisdiction: "City of Glen Cove"
+      key: "glen-cove"
+      status: "blocked"
+      vendor: "OpenGov Permitting & Licensing (tenant glencoveny)"
+      portal_kind: "historical-search"
+      portal: "https://glencoveny.portal.opengov.com/"
+      historical_records: true
+      anonymous_access: false
+      adapter: "none (opengov adapter to build)"
+      implementation_status: "discovered"
+      probe: "2026-10-25 curl: record_types 200 (12 types incl. Building Permit Application); anonymous records listing forbidden (same platform contract as hempsteadny)"
+      enumeration_status: "anonymous-enumeration-forbidden"
+      known_exclusions: "Recent OpenGov rollout; older paper permits not online"
+      records_request:
+        recipient_office: "City of Glen Cove Building Department"
+        request_portal_url: "https://glencoveny.gov/forms-permits"
+        system_scope: "Complete issued building-permit history (roofing first) with section-block-lot, permit type, status, issue/final/close dates, contractor name and Nassau OCA license number"
+        route: "records-first"
+    - jurisdiction: "City of Long Beach"
+      key: "long-beach"
+      status: "unavailable"
+      vendor: "unknown"
+      portal_kind: "records-information"
+      portal: "https://www.longbeachny.gov/building"
+      historical_records: false
+      anonymous_access: false
+      adapter: "none"
+      implementation_status: "documented-gap"
+      probe: "2026-10-25 curl: /building 200; no permit-portal link found; no OpenGov tenant longbeachny"
+      enumeration_status: "no-public-historical-search"
+      records_request:
+        recipient_office: "City of Long Beach Building Department"
+        request_portal_url: "https://www.longbeachny.gov/building"
+        system_scope: "Complete issued building-permit history (roofing first) with section-block-lot, permit type, status, issue/final/close dates, contractor name and Nassau OCA license number"
+        route: "records-first"
+    - jurisdiction: "Village of Atlantic Beach"
+      key: "village-atlantic-beach"
+      status: "needs-review"
+      vendor: "unknown"
+      portal_kind: "unknown"
+      portal: "https://www.villageofatlanticbeach.com/"
+      historical_records: false
+      anonymous_access: false
+      adapter: "none"
+      implementation_status: "not-started"
+      probe: "2026-10-25 automated homepage + building/permit-link scan: err:URLError:<urlopen error [SSL: TLSV1_ALERT_PROTOCOL_VERSI; no permit-vendor signature found"
+      enumeration_status: "unknown"
+    - jurisdiction: "Village of Baxter Estates"
+      key: "village-baxter-estates"
+      status: "needs-review"
+      vendor: "unknown"
+      portal_kind: "unknown"
+      portal: "https://baxterestates.org/"
+      historical_records: false
+      anonymous_access: false
+      adapter: "none"
+      implementation_status: "not-started"
+      probe: "2026-10-25 curl: village homepage returns Cloudflare challenge (403 Just a moment); not bypassed"
+      enumeration_status: "unknown"
+    - jurisdiction: "Village of Bayville"
+      key: "village-bayville"
+      status: "needs-review"
+      vendor: "unknown"
+      portal_kind: "unknown"
+      portal: "https://bayvilleny.gov/"
+      historical_records: false
+      anonymous_access: false
+      adapter: "none"
+      implementation_status: "not-started"
+      probe: "2026-10-25 automated homepage + building/permit-link scan: ok; no permit-vendor signature found"
+      enumeration_status: "unknown"
+    - jurisdiction: "Village of Bellerose"
+      key: "village-bellerose"
+      status: "needs-review"
+      vendor: "unknown"
+      portal_kind: "unknown"
+      portal: "https://www.bellerosevillage.org/"
+      historical_records: false
+      anonymous_access: false
+      adapter: "none"
+      implementation_status: "not-started"
+      probe: "2026-10-25 automated homepage + building/permit-link scan: ok; no permit-vendor signature found"
+      enumeration_status: "unknown"
+    - jurisdiction: "Village of Brookville"
+      key: "village-brookville"
+      status: "needs-review"
+      vendor: "unknown"
+      portal_kind: "unknown"
+      portal: "https://www.villageofbrookville.com/"
+      historical_records: false
+      anonymous_access: false
+      adapter: "none"
+      implementation_status: "not-started"
+      probe: "2026-10-25 curl: village homepage returns Cloudflare challenge (403 Just a moment); not bypassed"
+      enumeration_status: "unknown"
+    - jurisdiction: "Village of Cedarhurst"
+      key: "village-cedarhurst"
+      status: "needs-review"
+      vendor: "unknown"
+      portal_kind: "unknown"
+      portal: "https://www.cedarhurst.gov/"
+      historical_records: false
+      anonymous_access: false
+      adapter: "none"
+      implementation_status: "not-started"
+      probe: "2026-10-25 automated homepage + building/permit-link scan: ok; no permit-vendor signature found"
+      enumeration_status: "unknown"
+    - jurisdiction: "Village of Centre Island"
+      key: "village-centre-island"
+      status: "needs-review"
+      vendor: "unknown"
+      portal_kind: "unknown"
+      portal: "https://centreisland.org/"
+      historical_records: false
+      anonymous_access: false
+      adapter: "none"
+      implementation_status: "not-started"
+      probe: "2026-10-25 automated homepage + building/permit-link scan: ok; no permit-vendor signature found"
+      enumeration_status: "unknown"
+    - jurisdiction: "Village of Cove Neck"
+      key: "village-cove-neck"
+      status: "needs-review"
+      vendor: "unknown"
+      portal_kind: "unknown"
+      portal: "https://www.coveneck.org/"
+      historical_records: false
+      anonymous_access: false
+      adapter: "none"
+      implementation_status: "not-started"
+      probe: "2026-10-25 curl: village homepage returns Cloudflare challenge (403 Just a moment); not bypassed"
+      enumeration_status: "unknown"
+    - jurisdiction: "Village of East Hills"
+      key: "village-east-hills"
+      status: "needs-review"
+      vendor: "Cloudpermit (per village tutorial page, web search)"
+      portal_kind: "application-intake"
+      portal: "https://villageofeasthills.org/"
+      historical_records: false
+      anonymous_access: false
+      adapter: "none"
+      implementation_status: "discovered"
+      probe: "2026-10-25 curl: village homepage 403 Cloudflare challenge; Cloudpermit is typically applicant-login only"
+      enumeration_status: "unknown"
+    - jurisdiction: "Village of East Rockaway"
+      key: "village-east-rockaway"
+      status: "needs-review"
+      vendor: "unknown"
+      portal_kind: "unknown"
+      portal: "https://villageofeastrockaway.org/"
+      historical_records: false
+      anonymous_access: false
+      adapter: "none"
+      implementation_status: "not-started"
+      probe: "2026-10-25 automated homepage + building/permit-link scan: ok; no permit-vendor signature found"
+      enumeration_status: "unknown"
+    - jurisdiction: "Village of East Williston"
+      key: "village-east-williston"
+      status: "needs-review"
+      vendor: "Edmunds GovTech WIPP/OPA"
+      portal_kind: "unknown"
+      portal: "https://opa.edmundsgovtech.cloud/?municipalId=EWILNY"
+      historical_records: false
+      anonymous_access: false
+      adapter: "none"
+      implementation_status: "discovered"
+      probe: "2026-10-25 curl: 200 JS single-page app; permit-lookup capability not yet inspected (needs Playwright)"
+      enumeration_status: "unknown"
+    - jurisdiction: "Village of Farmingdale"
+      key: "village-farmingdale"
+      status: "needs-review"
+      vendor: "unknown"
+      portal_kind: "unknown"
+      portal: "http://www.farmingdalevillage.com/"
+      historical_records: false
+      anonymous_access: false
+      adapter: "none"
+      implementation_status: "not-started"
+      probe: "2026-10-25 automated homepage + building/permit-link scan: ok; no permit-vendor signature found"
+      enumeration_status: "unknown"
+    - jurisdiction: "Village of Floral Park"
+      key: "village-floral-park"
+      status: "blocked"
+      vendor: "iWorQ"
+      portal_kind: "historical-search"
+      portal: "https://floralparkny.portal.iworq.net/portalhome/floralparkny"
+      historical_records: true
+      anonymous_access: false
+      adapter: "none"
+      implementation_status: "discovered"
+      probe: "2026-10-25 curl: iWorQ portal 200; permit search form id=search-form-captcha (g-recaptcha) plus access-code gate; search by parcel/address/contractor/permit/date; columns include status and contractor"
+      enumeration_status: "captcha-gated"
+      known_exclusions: "reCAPTCHA gate; do not bypass"
+      records_request:
+        recipient_office: "Village of Floral Park Building Department / Village Clerk (FOIL)"
+        request_portal_url: "https://fpvillage.org/"
+        system_scope: "Complete issued building-permit history (roofing first) with section-block-lot, permit type, status, issue/final/close dates, contractor name and Nassau OCA license number"
+        route: "records-first"
+    - jurisdiction: "Village of Flower Hill"
+      key: "village-flower-hill"
+      status: "needs-review"
+      vendor: "unknown"
+      portal_kind: "unknown"
+      portal: "https://villageflowerhill.org/"
+      historical_records: false
+      anonymous_access: false
+      adapter: "none"
+      implementation_status: "not-started"
+      probe: "2026-10-25 automated homepage + building/permit-link scan: ok; no permit-vendor signature found"
+      enumeration_status: "unknown"
+    - jurisdiction: "Village of Freeport"
+      key: "village-freeport"
+      status: "blocked"
+      vendor: "OpenGov Permitting & Licensing (tenant freeportny)"
+      portal_kind: "historical-search"
+      portal: "https://freeportny.portal.opengov.com/"
+      historical_records: true
+      anonymous_access: false
+      adapter: "none"
+      implementation_status: "discovered"
+      probe: "2026-10-25 curl: api-east.viewpointcloud.com/v2/freeportny/record_types 200 (Building Permit Application present); anonymous records listing forbidden"
+      enumeration_status: "anonymous-enumeration-forbidden"
+      records_request:
+        recipient_office: "Village of Freeport Building Department / Village Clerk (FOIL)"
+        request_portal_url: "https://www.freeportny.gov/"
+        system_scope: "Complete issued building-permit history (roofing first) with section-block-lot, permit type, status, issue/final/close dates, contractor name and Nassau OCA license number"
+        route: "records-first"
+    - jurisdiction: "Village of Garden City"
+      key: "village-garden-city"
+      status: "manual-only"
+      vendor: "paper / in-person"
+      portal_kind: "records-information"
+      portal: "https://www.gardencityny.net/"
+      historical_records: false
+      anonymous_access: false
+      adapter: "none"
+      implementation_status: "documented-gap"
+      probe: "Paper Minor Building Permit Application PDF; no portal found (web search)"
+      enumeration_status: "no-public-historical-search"
+      records_request:
+        recipient_office: "Village of Garden City Building Department / Village Clerk (FOIL)"
+        request_portal_url: "https://www.gardencityny.net/"
+        system_scope: "Complete issued building-permit history (roofing first) with section-block-lot, permit type, status, issue/final/close dates, contractor name and Nassau OCA license number"
+        route: "records-first"
+    - jurisdiction: "Village of Great Neck"
+      key: "village-great-neck"
+      status: "needs-review"
+      vendor: "unknown"
+      portal_kind: "unknown"
+      portal: "https://www.greatneckvillage.org/"
+      historical_records: false
+      anonymous_access: false
+      adapter: "none"
+      implementation_status: "not-started"
+      probe: "2026-10-25 automated homepage + building/permit-link scan: ok; no permit-vendor signature found"
+      enumeration_status: "unknown"
+    - jurisdiction: "Village of Great Neck Estates"
+      key: "village-great-neck-estates"
+      status: "needs-review"
+      vendor: "unknown"
+      portal_kind: "unknown"
+      portal: "https://www.vgne.com/"
+      historical_records: false
+      anonymous_access: false
+      adapter: "none"
+      implementation_status: "not-started"
+      probe: "2026-10-25 curl: village homepage returns Cloudflare challenge (403 Just a moment); not bypassed"
+      enumeration_status: "unknown"
+    - jurisdiction: "Village of Great Neck Plaza"
+      key: "village-great-neck-plaza"
+      status: "needs-review"
+      vendor: "unknown"
+      portal_kind: "unknown"
+      portal: "https://greatneckplaza.net/"
+      historical_records: false
+      anonymous_access: false
+      adapter: "none"
+      implementation_status: "not-started"
+      probe: "2026-10-25 automated homepage + building/permit-link scan: ok; no permit-vendor signature found"
+      enumeration_status: "unknown"
+    - jurisdiction: "Village of Hempstead"
+      key: "village-hempstead"
+      status: "blocked"
+      vendor: "Granicus SmartGov"
+      portal_kind: "historical-search"
+      portal: "https://vlg-hempstead-ny.smartgovcommunity.com/Public/Home"
+      historical_records: true
+      anonymous_access: false
+      adapter: "none"
+      implementation_status: "discovered"
+      probe: "2026-10-25 curl: 200; public portal shows Sign Up or Log In; anonymous search not confirmed"
+      enumeration_status: "login-required"
+      records_request:
+        recipient_office: "Village of Hempstead Building Department / Village Clerk (FOIL)"
+        request_portal_url: "https://www.villageofhempstead.org/"
+        system_scope: "Complete issued building-permit history (roofing first) with section-block-lot, permit type, status, issue/final/close dates, contractor name and Nassau OCA license number"
+        route: "records-first"
+    - jurisdiction: "Village of Hewlett Bay Park"
+      key: "village-hewlett-bay-park"
+      status: "needs-review"
+      vendor: "unknown"
+      portal_kind: "unknown"
+      portal: "https://hewlettbayparkny.gov/"
+      historical_records: false
+      anonymous_access: false
+      adapter: "none"
+      implementation_status: "not-started"
+      probe: "2026-10-25 automated homepage + building/permit-link scan: ok; no permit-vendor signature found"
+      enumeration_status: "unknown"
+    - jurisdiction: "Village of Hewlett Harbor"
+      key: "village-hewlett-harbor"
+      status: "blocked"
+      vendor: "iWorQ"
+      portal_kind: "historical-search"
+      portal: "https://hewlettharbor.portal.iworq.net/portalhome/hewlettharbor"
+      historical_records: true
+      anonymous_access: false
+      adapter: "none"
+      implementation_status: "discovered"
+      probe: "2026-10-25 curl: iWorQ portal 200; permit search form id=search-form-captcha (g-recaptcha) plus access-code gate; search by parcel/address/contractor/permit/date; columns include status and contractor"
+      enumeration_status: "captcha-gated"
+      known_exclusions: "reCAPTCHA gate; do not bypass"
+      records_request:
+        recipient_office: "Village of Hewlett Harbor Building Department / Village Clerk (FOIL)"
+        request_portal_url: "https://hewlettharbor.gov/"
+        system_scope: "Complete issued building-permit history (roofing first) with section-block-lot, permit type, status, issue/final/close dates, contractor name and Nassau OCA license number"
+        route: "records-first"
+    - jurisdiction: "Village of Hewlett Neck"
+      key: "village-hewlett-neck"
+      status: "needs-review"
+      vendor: "unknown"
+      portal_kind: "unknown"
+      portal: "https://hewlettneck.org/"
+      historical_records: false
+      anonymous_access: false
+      adapter: "none"
+      implementation_status: "not-started"
+      probe: "2026-10-25 automated homepage + building/permit-link scan: ok; no permit-vendor signature found"
+      enumeration_status: "unknown"
+    - jurisdiction: "Village of Island Park"
+      key: "village-island-park"
+      status: "needs-review"
+      vendor: "unknown"
+      portal_kind: "unknown"
+      portal: "https://villageofislandpark.com/"
+      historical_records: false
+      anonymous_access: false
+      adapter: "none"
+      implementation_status: "not-started"
+      probe: "2026-10-25 automated homepage + building/permit-link scan: err:URLError:<urlopen error [Errno 54] Connection reset by p; no permit-vendor signature found"
+      enumeration_status: "unknown"
+    - jurisdiction: "Village of Kensington"
+      key: "village-kensington"
+      status: "needs-review"
+      vendor: "unknown"
+      portal_kind: "unknown"
+      portal: "https://vok-ny.com/"
+      historical_records: false
+      anonymous_access: false
+      adapter: "none"
+      implementation_status: "not-started"
+      probe: "2026-10-25 automated homepage + building/permit-link scan: ok; no permit-vendor signature found"
+      enumeration_status: "unknown"
+    - jurisdiction: "Village of Kings Point"
+      key: "village-kings-point"
+      status: "needs-review"
+      vendor: "unknown"
+      portal_kind: "unknown"
+      portal: "https://www.villageofkingspoint.org/"
+      historical_records: false
+      anonymous_access: false
+      adapter: "none"
+      implementation_status: "not-started"
+      probe: "2026-10-25 curl: village homepage returns Cloudflare challenge (403 Just a moment); not bypassed"
+      enumeration_status: "unknown"
+    - jurisdiction: "Village of Lake Success"
+      key: "village-lake-success"
+      status: "needs-review"
+      vendor: "unknown"
+      portal_kind: "unknown"
+      portal: "https://www.villageoflakesuccess.com/"
+      historical_records: false
+      anonymous_access: false
+      adapter: "none"
+      implementation_status: "not-started"
+      probe: "2026-10-25 automated homepage + building/permit-link scan: ok; no permit-vendor signature found"
+      enumeration_status: "unknown"
+    - jurisdiction: "Village of Lattingtown"
+      key: "village-lattingtown"
+      status: "needs-review"
+      vendor: "unknown"
+      portal_kind: "unknown"
+      portal: "https://www.villageoflattingtown.org/"
+      historical_records: false
+      anonymous_access: false
+      adapter: "none"
+      implementation_status: "not-started"
+      probe: "2026-10-25 automated homepage + building/permit-link scan: err:URLError:<urlopen error [SSL: TLSV1_ALERT_PROTOCOL_VERSI; no permit-vendor signature found"
+      enumeration_status: "unknown"
+    - jurisdiction: "Village of Laurel Hollow"
+      key: "village-laurel-hollow"
+      status: "needs-review"
+      vendor: "unknown"
+      portal_kind: "unknown"
+      portal: "https://www.laurelhollow.org/"
+      historical_records: false
+      anonymous_access: false
+      adapter: "none"
+      implementation_status: "not-started"
+      probe: "2026-10-25 curl: village homepage returns Cloudflare challenge (403 Just a moment); not bypassed"
+      enumeration_status: "unknown"
+    - jurisdiction: "Village of Lawrence"
+      key: "village-lawrence"
+      status: "needs-review"
+      vendor: "unknown"
+      portal_kind: "unknown"
+      portal: "http://www.villageoflawrence.org/"
+      historical_records: false
+      anonymous_access: false
+      adapter: "none"
+      implementation_status: "not-started"
+      probe: "2026-10-25 automated homepage + building/permit-link scan: ok; no permit-vendor signature found"
+      enumeration_status: "unknown"
+    - jurisdiction: "Village of Lynbrook"
+      key: "village-lynbrook"
+      status: "needs-review"
+      vendor: "unknown"
+      portal_kind: "unknown"
+      portal: "https://www.lynbrookvillage.net/"
+      historical_records: false
+      anonymous_access: false
+      adapter: "none"
+      implementation_status: "not-started"
+      probe: "2026-10-25 automated homepage + building/permit-link scan: ok; no permit-vendor signature found"
+      enumeration_status: "unknown"
+    - jurisdiction: "Village of Malverne"
+      key: "village-malverne"
+      status: "needs-review"
+      vendor: "unknown"
+      portal_kind: "unknown"
+      portal: "https://www.malvernevillage.org/"
+      historical_records: false
+      anonymous_access: false
+      adapter: "none"
+      implementation_status: "not-started"
+      probe: "2026-10-25 automated homepage + building/permit-link scan: ok; no permit-vendor signature found"
+      enumeration_status: "unknown"
+    - jurisdiction: "Village of Manorhaven"
+      key: "village-manorhaven"
+      status: "needs-review"
+      vendor: "unknown"
+      portal_kind: "unknown"
+      portal: "https://manorhaven.org/"
+      historical_records: false
+      anonymous_access: false
+      adapter: "none"
+      implementation_status: "not-started"
+      probe: "2026-10-25 automated homepage + building/permit-link scan: ok; no permit-vendor signature found"
+      enumeration_status: "unknown"
+    - jurisdiction: "Village of Massapequa Park"
+      key: "village-massapequa-park"
+      status: "needs-review"
+      vendor: "unknown"
+      portal_kind: "unknown"
+      portal: "https://masspk.com/"
+      historical_records: false
+      anonymous_access: false
+      adapter: "none"
+      implementation_status: "not-started"
+      probe: "2026-10-25 curl: village homepage returns Cloudflare challenge (403 Just a moment); not bypassed"
+      enumeration_status: "unknown"
+    - jurisdiction: "Village of Matinecock"
+      key: "village-matinecock"
+      status: "needs-review"
+      vendor: "unknown"
+      portal_kind: "unknown"
+      portal: "https://www.matinecockvillage.org/"
+      historical_records: false
+      anonymous_access: false
+      adapter: "none"
+      implementation_status: "not-started"
+      probe: "2026-10-25 automated homepage + building/permit-link scan: ok; no permit-vendor signature found"
+      enumeration_status: "unknown"
+    - jurisdiction: "Village of Mill Neck"
+      key: "village-mill-neck"
+      status: "needs-review"
+      vendor: "unknown"
+      portal_kind: "unknown"
+      portal: "https://millneckvillage.com/"
+      historical_records: false
+      anonymous_access: false
+      adapter: "none"
+      implementation_status: "not-started"
+      probe: "2026-10-25 automated homepage + building/permit-link scan: ok; no permit-vendor signature found"
+      enumeration_status: "unknown"
+    - jurisdiction: "Village of Mineola"
+      key: "village-mineola"
+      status: "manual-only"
+      vendor: "paper / in-person"
+      portal_kind: "records-information"
+      portal: "https://www.mineola-ny.gov/"
+      historical_records: false
+      anonymous_access: false
+      adapter: "none"
+      implementation_status: "documented-gap"
+      probe: "Village site offers downloadable permit forms only; no portal found (web search)"
+      enumeration_status: "no-public-historical-search"
+      records_request:
+        recipient_office: "Village of Mineola Building Department / Village Clerk (FOIL)"
+        request_portal_url: "https://www.mineola-ny.gov/"
+        system_scope: "Complete issued building-permit history (roofing first) with section-block-lot, permit type, status, issue/final/close dates, contractor name and Nassau OCA license number"
+        route: "records-first"
+    - jurisdiction: "Village of Munsey Park"
+      key: "village-munsey-park"
+      status: "needs-review"
+      vendor: "unknown"
+      portal_kind: "unknown"
+      portal: "http://www.munseypark.org/"
+      historical_records: false
+      anonymous_access: false
+      adapter: "none"
+      implementation_status: "not-started"
+      probe: "2026-10-25 automated homepage + building/permit-link scan: ok; no permit-vendor signature found"
+      enumeration_status: "unknown"
+    - jurisdiction: "Village of Muttontown"
+      key: "village-muttontown"
+      status: "needs-review"
+      vendor: "unknown"
+      portal_kind: "unknown"
+      portal: "https://www.muttontownny.gov/"
+      historical_records: false
+      anonymous_access: false
+      adapter: "none"
+      implementation_status: "not-started"
+      probe: "2026-10-25 automated homepage + building/permit-link scan: ok; no permit-vendor signature found"
+      enumeration_status: "unknown"
+    - jurisdiction: "Village of New Hyde Park"
+      key: "village-new-hyde-park"
+      status: "blocked"
+      vendor: "iWorQ"
+      portal_kind: "historical-search"
+      portal: "https://newhydepark.portal.iworq.net/NEWHYDEPARK/permits/600"
+      historical_records: true
+      anonymous_access: false
+      adapter: "none"
+      implementation_status: "discovered"
+      probe: "2026-10-25 curl: iWorQ portal 200; permit search form id=search-form-captcha (g-recaptcha) plus access-code gate; search by parcel/address/contractor/permit/date; columns include status and contractor"
+      enumeration_status: "captcha-gated"
+      known_exclusions: "reCAPTCHA gate; do not bypass"
+      records_request:
+        recipient_office: "Village of New Hyde Park Building Department / Village Clerk (FOIL)"
+        request_portal_url: "https://vnhp.org/"
+        system_scope: "Complete issued building-permit history (roofing first) with section-block-lot, permit type, status, issue/final/close dates, contractor name and Nassau OCA license number"
+        route: "records-first"
+    - jurisdiction: "Village of North Hills"
+      key: "village-north-hills"
+      status: "blocked"
+      vendor: "OpenGov Permitting & Licensing (tenant northhillsvillageny)"
+      portal_kind: "historical-search"
+      portal: "https://northhillsvillageny.portal.opengov.com/"
+      historical_records: true
+      anonymous_access: false
+      adapter: "none"
+      implementation_status: "discovered"
+      probe: "2026-10-25 curl: api-east.viewpointcloud.com/v2/northhillsvillageny/record_types 200 (Building Permit Application present); anonymous records listing forbidden"
+      enumeration_status: "anonymous-enumeration-forbidden"
+      records_request:
+        recipient_office: "Village of North Hills Building Department / Village Clerk (FOIL)"
+        request_portal_url: "http://www.villagenorthhills.com/"
+        system_scope: "Complete issued building-permit history (roofing first) with section-block-lot, permit type, status, issue/final/close dates, contractor name and Nassau OCA license number"
+        route: "records-first"
+    - jurisdiction: "Village of Old Brookville"
+      key: "village-old-brookville"
+      status: "needs-review"
+      vendor: "unknown"
+      portal_kind: "unknown"
+      portal: "https://oldbrookville.net/"
+      historical_records: false
+      anonymous_access: false
+      adapter: "none"
+      implementation_status: "not-started"
+      probe: "2026-10-25 automated homepage + building/permit-link scan: ok; no permit-vendor signature found"
+      enumeration_status: "unknown"
+    - jurisdiction: "Village of Old Westbury"
+      key: "village-old-westbury"
+      status: "needs-review"
+      vendor: "Edmunds GovTech WIPP/OPA"
+      portal_kind: "unknown"
+      portal: "https://wipp.edmundsgovtech.cloud/home?wippId=OWVL"
+      historical_records: false
+      anonymous_access: false
+      adapter: "none"
+      implementation_status: "discovered"
+      probe: "2026-10-25 curl: 200 JS single-page app; permit-lookup capability not yet inspected (needs Playwright)"
+      enumeration_status: "unknown"
+    - jurisdiction: "Village of Oyster Bay Cove"
+      key: "village-oyster-bay-cove"
+      status: "needs-review"
+      vendor: "unknown"
+      portal_kind: "unknown"
+      portal: "https://www.oysterbaycove.net/"
+      historical_records: false
+      anonymous_access: false
+      adapter: "none"
+      implementation_status: "not-started"
+      probe: "2026-10-25 automated homepage + building/permit-link scan: ok; no permit-vendor signature found"
+      enumeration_status: "unknown"
+    - jurisdiction: "Village of Plandome"
+      key: "village-plandome"
+      status: "needs-review"
+      vendor: "Edmunds GovTech WIPP/OPA"
+      portal_kind: "unknown"
+      portal: "https://wipp.edmundsgovtech.cloud/home?wippId=PLAN"
+      historical_records: false
+      anonymous_access: false
+      adapter: "none"
+      implementation_status: "discovered"
+      probe: "2026-10-25 curl: 200 JS single-page app; permit-lookup capability not yet inspected (needs Playwright)"
+      enumeration_status: "unknown"
+    - jurisdiction: "Village of Plandome Heights"
+      key: "village-plandome-heights"
+      status: "needs-review"
+      vendor: "unknown"
+      portal_kind: "unknown"
+      portal: "https://plandomeheights-ny.gov/"
+      historical_records: false
+      anonymous_access: false
+      adapter: "none"
+      implementation_status: "not-started"
+      probe: "2026-10-25 automated homepage + building/permit-link scan: ok; no permit-vendor signature found"
+      enumeration_status: "unknown"
+    - jurisdiction: "Village of Plandome Manor"
+      key: "village-plandome-manor"
+      status: "needs-review"
+      vendor: "unknown"
+      portal_kind: "unknown"
+      portal: "https://plandomemanorny.gov/"
+      historical_records: false
+      anonymous_access: false
+      adapter: "none"
+      implementation_status: "not-started"
+      probe: "2026-10-25 automated homepage + building/permit-link scan: ok; no permit-vendor signature found"
+      enumeration_status: "unknown"
+    - jurisdiction: "Village of Port Washington North"
+      key: "village-port-washington-north"
+      status: "needs-review"
+      vendor: "unknown"
+      portal_kind: "unknown"
+      portal: "https://portwashingtonnorth.org/"
+      historical_records: false
+      anonymous_access: false
+      adapter: "none"
+      implementation_status: "not-started"
+      probe: "2026-10-25 automated homepage + building/permit-link scan: ok; no permit-vendor signature found"
+      enumeration_status: "unknown"
+    - jurisdiction: "Village of Rockville Centre"
+      key: "village-rockville-centre"
+      status: "manual-only"
+      vendor: "paper / in-person"
+      portal_kind: "records-information"
+      portal: "https://www.rvcny.gov/"
+      historical_records: false
+      anonymous_access: false
+      adapter: "none"
+      implementation_status: "documented-gap"
+      probe: "Instruction packets say applications are filed in person with the residential or commercial inspector (web search, rvcny.gov PDFs); homepage is Cloudflare-challenged to curl"
+      enumeration_status: "no-public-historical-search"
+      records_request:
+        recipient_office: "Village of Rockville Centre Building Department / Village Clerk (FOIL)"
+        request_portal_url: "https://www.rvcny.gov/"
+        system_scope: "Complete issued building-permit history (roofing first) with section-block-lot, permit type, status, issue/final/close dates, contractor name and Nassau OCA license number"
+        route: "records-first"
+    - jurisdiction: "Village of Roslyn"
+      key: "village-roslyn"
+      status: "needs-review"
+      vendor: "unknown"
+      portal_kind: "unknown"
+      portal: "https://www.roslynny.gov/"
+      historical_records: false
+      anonymous_access: false
+      adapter: "none"
+      implementation_status: "not-started"
+      probe: "2026-10-25 curl: village homepage returns Cloudflare challenge (403 Just a moment); not bypassed"
+      enumeration_status: "unknown"
+    - jurisdiction: "Village of Roslyn Estates"
+      key: "village-roslyn-estates"
+      status: "needs-review"
+      vendor: "unknown"
+      portal_kind: "unknown"
+      portal: "https://villageofroslynestates.com/"
+      historical_records: false
+      anonymous_access: false
+      adapter: "none"
+      implementation_status: "not-started"
+      probe: "2026-10-25 automated homepage + building/permit-link scan: err:URLError:<urlopen error EOF occurred in violation of pro; no permit-vendor signature found"
+      enumeration_status: "unknown"
+    - jurisdiction: "Village of Roslyn Harbor"
+      key: "village-roslyn-harbor"
+      status: "needs-review"
+      vendor: "unknown"
+      portal_kind: "unknown"
+      portal: "https://www.roslynharbor.org/"
+      historical_records: false
+      anonymous_access: false
+      adapter: "none"
+      implementation_status: "not-started"
+      probe: "2026-10-25 automated homepage + building/permit-link scan: ok; no permit-vendor signature found"
+      enumeration_status: "unknown"
+    - jurisdiction: "Village of Russell Gardens"
+      key: "village-russell-gardens"
+      status: "needs-review"
+      vendor: "unknown"
+      portal_kind: "unknown"
+      portal: "https://www.russellgardens.com/"
+      historical_records: false
+      anonymous_access: false
+      adapter: "none"
+      implementation_status: "not-started"
+      probe: "2026-10-25 automated homepage + building/permit-link scan: ok; no permit-vendor signature found"
+      enumeration_status: "unknown"
+    - jurisdiction: "Village of Saddle Rock"
+      key: "village-saddle-rock"
+      status: "needs-review"
+      vendor: "unknown"
+      portal_kind: "unknown"
+      portal: "https://saddlerockny.gov/"
+      historical_records: false
+      anonymous_access: false
+      adapter: "none"
+      implementation_status: "not-started"
+      probe: "2026-10-25 automated homepage + building/permit-link scan: ok; no permit-vendor signature found"
+      enumeration_status: "unknown"
+    - jurisdiction: "Village of Sands Point"
+      key: "village-sands-point"
+      status: "needs-review"
+      vendor: "unknown"
+      portal_kind: "unknown"
+      portal: "http://sandspointpreserveconservancy.org/"
+      historical_records: false
+      anonymous_access: false
+      adapter: "none"
+      implementation_status: "not-started"
+      probe: "2026-10-25 automated homepage + building/permit-link scan: ok; no permit-vendor signature found"
+      enumeration_status: "unknown"
+    - jurisdiction: "Village of Sea Cliff"
+      key: "village-sea-cliff"
+      status: "needs-review"
+      vendor: "unknown"
+      portal_kind: "unknown"
+      portal: "https://www.seacliff-ny.gov/"
+      historical_records: false
+      anonymous_access: false
+      adapter: "none"
+      implementation_status: "not-started"
+      probe: "2026-10-25 automated homepage + building/permit-link scan: ok; no permit-vendor signature found"
+      enumeration_status: "unknown"
+    - jurisdiction: "Village of South Floral Park"
+      key: "village-south-floral-park"
+      status: "needs-review"
+      vendor: "unknown"
+      portal_kind: "unknown"
+      portal: "https://southfloralpark.org/"
+      historical_records: false
+      anonymous_access: false
+      adapter: "none"
+      implementation_status: "not-started"
+      probe: "2026-10-25 automated homepage + building/permit-link scan: ok; no permit-vendor signature found"
+      enumeration_status: "unknown"
+    - jurisdiction: "Village of Stewart Manor"
+      key: "village-stewart-manor"
+      status: "needs-review"
+      vendor: "unknown"
+      portal_kind: "unknown"
+      portal: "https://villagestewartmanor.digitaltowpath.org:10254/content"
+      historical_records: false
+      anonymous_access: false
+      adapter: "none"
+      implementation_status: "not-started"
+      probe: "2026-10-25 automated homepage + building/permit-link scan: ok; no permit-vendor signature found"
+      enumeration_status: "unknown"
+    - jurisdiction: "Village of Thomaston"
+      key: "village-thomaston"
+      status: "needs-review"
+      vendor: "unknown"
+      portal_kind: "unknown"
+      portal: "https://www.villageofthomaston.org/"
+      historical_records: false
+      anonymous_access: false
+      adapter: "none"
+      implementation_status: "not-started"
+      probe: "2026-10-25 automated homepage + building/permit-link scan: err:URLError:<urlopen error [Errno 8] nodename nor servname ; no permit-vendor signature found"
+      enumeration_status: "unknown"
+    - jurisdiction: "Village of Upper Brookville"
+      key: "village-upper-brookville"
+      status: "needs-review"
+      vendor: "unknown"
+      portal_kind: "unknown"
+      portal: "https://upperbrookville.org/"
+      historical_records: false
+      anonymous_access: false
+      adapter: "none"
+      implementation_status: "not-started"
+      probe: "2026-10-25 automated homepage + building/permit-link scan: ok; no permit-vendor signature found"
+      enumeration_status: "unknown"
+    - jurisdiction: "Village of Valley Stream"
+      key: "village-valley-stream"
+      status: "blocked"
+      vendor: "OpenGov Permitting & Licensing (tenant valleystreamny)"
+      portal_kind: "historical-search"
+      portal: "https://valleystreamny.portal.opengov.com/"
+      historical_records: true
+      anonymous_access: false
+      adapter: "none"
+      implementation_status: "discovered"
+      probe: "2026-10-25 curl: api-east.viewpointcloud.com/v2/valleystreamny/record_types 200 (Building Permit Application present); anonymous records listing forbidden"
+      enumeration_status: "anonymous-enumeration-forbidden"
+      records_request:
+        recipient_office: "Village of Valley Stream Building Department / Village Clerk (FOIL)"
+        request_portal_url: "https://www.vsvny.org/"
+        system_scope: "Complete issued building-permit history (roofing first) with section-block-lot, permit type, status, issue/final/close dates, contractor name and Nassau OCA license number"
+        route: "records-first"
+    - jurisdiction: "Village of Westbury"
+      key: "village-westbury"
+      status: "needs-review"
+      vendor: "unknown"
+      portal_kind: "unknown"
+      portal: "https://www.villageofwestbury.org/"
+      historical_records: false
+      anonymous_access: false
+      adapter: "none"
+      implementation_status: "not-started"
+      probe: "2026-10-25 automated homepage + building/permit-link scan: ok; no permit-vendor signature found"
+      enumeration_status: "unknown"
+    - jurisdiction: "Village of Williston Park"
+      key: "village-williston-park"
+      status: "needs-review"
+      vendor: "unknown"
+      portal_kind: "unknown"
+      portal: "https://www.villageofwillistonpark.org/"
+      historical_records: false
+      anonymous_access: false
+      adapter: "none"
+      implementation_status: "not-started"
+      probe: "2026-10-25 curl: village homepage returns Cloudflare challenge (403 Just a moment); not bypassed"
+      enumeration_status: "unknown"
+    - jurisdiction: "Village of Woodsburgh"
+      key: "village-woodsburgh"
+      status: "needs-review"
+      vendor: "unknown"
+      portal_kind: "unknown"
+      portal: "https://woodsburghny.com/"
+      historical_records: false
+      anonymous_access: false
+      adapter: "none"
+      implementation_status: "not-started"
+      probe: "2026-10-25 automated homepage + building/permit-link scan: ok; no permit-vendor signature found"
+      enumeration_status: "unknown"
+
+source_inventory:
+  parcel_geometry: https://gis.nassaucountyny.gov/server/rest/services/Hosted/Parcels_2026_Clean/FeatureServer/0
+  parcel_points_owner: https://gisservices.its.ny.gov/arcgis/rest/services/NYS_Tax_Parcel_Centroid_Points/FeatureServer/0
+  assessment_roll: https://data.ny.gov/resource/7vem-aaz7.json
+  appraisal_detail: https://lrv.nassaucountyny.gov/
+  corporate_registry: https://data.ny.gov/resource/n9v6-gdp6.json
+  corporate_detail_api: https://apps.dos.ny.gov/PublicInquiryWeb/api/PublicInquiry/
+  contractor_licensing: "https://apex5.nassaucountyny.gov/ords/f?p=288:500:::NO"
+  places: s3://overturemaps-us-west-2/release/2026-10-21.0/theme=places/type=place/
+  bbb: https://www.bbb.org/
+
+destination:
+  writes_in_scope: true
+  proven: true
+  mode: "internal reconciliation store = local DuckDB file (operator decision 2026-10-25; no hosted database)"
+  project: oracle-property-intelligence-platform-pipeline-nassau-ny
+  environment: local-non-production
+  database_file: data/nassau.duckdb (repo-relative, gitignored)
+  writer: pipeline.run single writer (exclusive flock on data/.pipeline.lock)
+  independent_identity_sources:
+    - "pipeline/config.py DB_PATH resolves to <repo>/data/nassau.duckdb (code-configured path)"
+    - "duckdb_databases() on the opened connection reports the same file path, and pipeline_runs in that file holds the run ids written by this pipeline"
+  credentials: none (local file)
+
+enrichment:
+  bbb:
+    status: blocked-local-egress
+    source_access_status: "403 Cloudflare challenge on /us/ny/*/category/roofing-contractors from local US egress (2026-10-25); robots.txt disallows query-string pagination"
+    next_action: AWS remote BBB execution per bbb-harvest skill
+  places:
+    status: loaded
+    release: 2026-10-21.0
+    loaded_count: 78054
+    schema_note: "release 2026-10-21.0 has no categories column; uses basic_category and taxonomy (primary, hierarchy, alternates)"
+    licenses: "CDLA-Permissive-2.0 (all rows); some rows also Apache-2.0 or CC0-1.0"
+    bbox: "-73.7683,40.5724,-73.4194,40.9192"
+  contractor_license:
+    status: discovered
+    authority: Nassau County Department of Consumer Affairs (home improvement license)
+    access: "Oracle APEX classic report, anonymous, no CAPTCHA, 15 rows/page, CSV/Excel download button (needs browser session)"
+
+approved_exceptions:
+  - gate: parcel
+    reason: "Operator-approved 2026-10-25: 4.41 percent gap between the 2025 county roll (426460) and GIS polygons (407648) is roll sections 5 special franchise, 6 utility and 8 wholly exempt (15564 rows) that mostly have no tax-lot polygon; taxable roll section 1 gap is 0.79 percent"
+    approved_by: operator
+    approved_at: "2026-10-25"
+    canonical_denominator: "2025 county roll, 426460 rows (data.ny.gov 7vem-aaz7, city-roll SWIS 280500 and 280900 excluded)"
+    seed_decision: "Seed from roll; geometry joined by SBL; rows without geometry kept with null geometry"
+    excluded_population: none
+    coverage_effect: "Rows without a polygon have no point-in-polygon structure match and rely on the NYS centroid point (if any) for coordinates"

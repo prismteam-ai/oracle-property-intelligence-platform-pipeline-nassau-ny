@@ -1,0 +1,426 @@
+{
+  "manifest_version": 1,
+  "run_id": "ipfs-20261026T032236Z",
+  "generated_at": "2026-10-26T03:22:36Z",
+  "county": "Nassau",
+  "state": "NY",
+  "fips": "36059",
+  "provider": {
+    "name": "Filebase",
+    "endpoint": "https://s3.filebase.com",
+    "bucket": "nassau-property-pipeline"
+  },
+  "ipns": null,
+  "pipeline_commit": "97d06a8cf6e4690b0a05ac1e7964ecc6bb4edd01",
+  "previous_run": null,
+  "note": "CIDs are content-addressed: any data change produces new CIDs. Earlier runs' CIDs stay in docs/ipfs/history.json.",
+  "artifacts": [
+    {
+      "name": "crm_properties",
+      "path": "crm_properties.parquet",
+      "description": "Roofing-CRM map table: one row per mappable property with roof age and owner signals",
+      "cid": "bafybeibm4mimuy4miseibpylvi6rgrkaedlsyb7vr7sbjgtj5jqukqzpta",
+      "cid_version": 1,
+      "codec": "file",
+      "multicodec": "dag-pb",
+      "size": 22151554,
+      "sha256": "8f1923760f9cf9652baed8dd9933484b9ce22e8c1429d96982bb57ef153aa6db",
+      "row_count": 422304,
+      "generated_at": "2026-10-26T03:22:36Z",
+      "car": {
+        "path": "crm_properties.car",
+        "size": 22153618,
+        "sha256": "599ea0b14130081d86dc2e0059f1c02c35351731b7c7ac46bedcc7a6a51d9327",
+        "root_cid": "bafybeibm4mimuy4miseibpylvi6rgrkaedlsyb7vr7sbjgtj5jqukqzpta",
+        "s3_key": "ipfs-20261026T032236Z/crm_properties.car",
+        "filebase_cid": "bafybeibm4mimuy4miseibpylvi6rgrkaedlsyb7vr7sbjgtj5jqukqzpta",
+        "filebase_pinning_status": "pinned",
+        "filebase_cid_matches_root": true
+      },
+      "origins": [],
+      "parquet_upload": {
+        "s3_key": "ipfs-20261026T032236Z/crm_properties.parquet",
+        "filebase_cid": "QmTq6z6GXafnVemfu7fGdHwV7TB6Kwtv7evVxGUtNrVBz1",
+        "pinning_status": "pinned",
+        "matches_local_root": false,
+        "note": "Plain uploads get Filebase's own UnixFS encoding (CIDv0 Qm...), not the CIDv1 of the CAR import; the CAR root is the artifact's identity"
+      },
+      "gateway_urls": {
+        "https://gateway.pinata.cloud": "https://gateway.pinata.cloud/ipfs/bafybeibm4mimuy4miseibpylvi6rgrkaedlsyb7vr7sbjgtj5jqukqzpta",
+        "https://dget.top": "https://dget.top/ipfs/bafybeibm4mimuy4miseibpylvi6rgrkaedlsyb7vr7sbjgtj5jqukqzpta",
+        "https://ipfs.io": "https://ipfs.io/ipfs/bafybeibm4mimuy4miseibpylvi6rgrkaedlsyb7vr7sbjgtj5jqukqzpta",
+        "https://dweb.link": "https://dweb.link/ipfs/bafybeibm4mimuy4miseibpylvi6rgrkaedlsyb7vr7sbjgtj5jqukqzpta"
+      }
+    },
+    {
+      "name": "crm_permits",
+      "path": "crm_permits.parquet",
+      "description": "Roofing-CRM permit table: Oyster Bay eTRAKiT permits linked to a property, with roofing class and open duration",
+      "cid": "bafkreibsz4fuppdn5fdxabyogghtcgubix4rz3qgev675wdemxwquzzg6u",
+      "cid_version": 1,
+      "codec": "file",
+      "multicodec": "raw",
+      "size": 29461,
+      "sha256": "32cf0b47bc6de94770070e318f311a8145f91cee06257dfed86465ed0a6726f5",
+      "row_count": 443,
+      "generated_at": "2026-10-26T03:22:36Z",
+      "car": {
+        "path": "crm_permits.car",
+        "size": 29559,
+        "sha256": "56ed010127042cdc27ec7de447b1b3cdfc6af7a3e8b24d59cd0094dd2b86e822",
+        "root_cid": "bafkreibsz4fuppdn5fdxabyogghtcgubix4rz3qgev675wdemxwquzzg6u",
+        "s3_key": "ipfs-20261026T032236Z/crm_permits.car",
+        "filebase_cid": "bafkreibsz4fuppdn5fdxabyogghtcgubix4rz3qgev675wdemxwquzzg6u",
+        "filebase_pinning_status": "pinned",
+        "filebase_cid_matches_root": true
+      },
+      "origins": [],
+      "parquet_upload": {
+        "s3_key": "ipfs-20261026T032236Z/crm_permits.parquet",
+        "filebase_cid": "QmTqoazFpaW79Y1EsUiPmx2gvS7ur6wsMtVpDVbN1RdphA",
+        "pinning_status": "pinned",
+        "matches_local_root": false,
+        "note": "Plain uploads get Filebase's own UnixFS encoding (CIDv0 Qm...), not the CIDv1 of the CAR import; the CAR root is the artifact's identity"
+      },
+      "gateway_urls": {
+        "https://gateway.pinata.cloud": "https://gateway.pinata.cloud/ipfs/bafkreibsz4fuppdn5fdxabyogghtcgubix4rz3qgev675wdemxwquzzg6u",
+        "https://dget.top": "https://dget.top/ipfs/bafkreibsz4fuppdn5fdxabyogghtcgubix4rz3qgev675wdemxwquzzg6u",
+        "https://ipfs.io": "https://ipfs.io/ipfs/bafkreibsz4fuppdn5fdxabyogghtcgubix4rz3qgev675wdemxwquzzg6u",
+        "https://dweb.link": "https://dweb.link/ipfs/bafkreibsz4fuppdn5fdxabyogghtcgubix4rz3qgev675wdemxwquzzg6u"
+      }
+    },
+    {
+      "name": "properties",
+      "path": "properties.parquet",
+      "description": "Property backbone: 2025 roll joined to GIS/centroids/NSI with ownership and roof-age fields",
+      "cid": "bafybeigezbm2m7bi536yo55snhfx5iqoi3uja7zcnw3xinsp666bg25s3a",
+      "cid_version": 1,
+      "codec": "file",
+      "multicodec": "dag-pb",
+      "size": 33224299,
+      "sha256": "91f8edac0a6b4bc9fff0706cf8f4caa44424e237d80f59125ca035ea9f9296e5",
+      "row_count": 426460,
+      "generated_at": "2026-10-26T03:22:36Z",
+      "car": {
+        "path": "properties.car",
+        "size": 33227254,
+        "sha256": "5e2c9fc084ee79bfb1d0c1fcf3f1dad04d5479fa5a28fd6fab45c44f4f2c0269",
+        "root_cid": "bafybeigezbm2m7bi536yo55snhfx5iqoi3uja7zcnw3xinsp666bg25s3a",
+        "s3_key": "ipfs-20261026T032236Z/properties.car",
+        "filebase_cid": "bafybeigezbm2m7bi536yo55snhfx5iqoi3uja7zcnw3xinsp666bg25s3a",
+        "filebase_pinning_status": "pinned",
+        "filebase_cid_matches_root": true
+      },
+      "origins": [],
+      "parquet_upload": {
+        "s3_key": "ipfs-20261026T032236Z/properties.parquet",
+        "filebase_cid": "QmV3kTPmyxCbSt2giSDiyguRLMmrrcJAM3bSyDiQRP245N",
+        "pinning_status": "pinned",
+        "matches_local_root": false,
+        "note": "Plain uploads get Filebase's own UnixFS encoding (CIDv0 Qm...), not the CIDv1 of the CAR import; the CAR root is the artifact's identity"
+      },
+      "gateway_urls": {
+        "https://gateway.pinata.cloud": "https://gateway.pinata.cloud/ipfs/bafybeigezbm2m7bi536yo55snhfx5iqoi3uja7zcnw3xinsp666bg25s3a",
+        "https://dget.top": "https://dget.top/ipfs/bafybeigezbm2m7bi536yo55snhfx5iqoi3uja7zcnw3xinsp666bg25s3a",
+        "https://ipfs.io": "https://ipfs.io/ipfs/bafybeigezbm2m7bi536yo55snhfx5iqoi3uja7zcnw3xinsp666bg25s3a",
+        "https://dweb.link": "https://dweb.link/ipfs/bafybeigezbm2m7bi536yo55snhfx5iqoi3uja7zcnw3xinsp666bg25s3a"
+      }
+    },
+    {
+      "name": "property_roof_age",
+      "path": "property_roof_age.parquet",
+      "description": "Final roof age per property: latest roofing permit, else NSI census-block estimate, with basis/confidence",
+      "cid": "bafybeif2j5ixwnwerqdqwh4zr4xc3lzovz5gpefh6pmqfsl4kodyjf5jqm",
+      "cid_version": 1,
+      "codec": "file",
+      "multicodec": "dag-pb",
+      "size": 8965267,
+      "sha256": "f11e2a3b3f0b78f7d94d840a9f9c77988f0a2032b17725bcd3f65116e0fb32af",
+      "row_count": 426460,
+      "generated_at": "2026-10-26T03:22:36Z",
+      "car": {
+        "path": "property_roof_age.car",
+        "size": 8966174,
+        "sha256": "91d15da1c43195df853b7577b9457557283244427525c4c58a397d45e9625f69",
+        "root_cid": "bafybeif2j5ixwnwerqdqwh4zr4xc3lzovz5gpefh6pmqfsl4kodyjf5jqm",
+        "s3_key": "ipfs-20261026T032236Z/property_roof_age.car",
+        "filebase_cid": "bafybeif2j5ixwnwerqdqwh4zr4xc3lzovz5gpefh6pmqfsl4kodyjf5jqm",
+        "filebase_pinning_status": "pinned",
+        "filebase_cid_matches_root": true
+      },
+      "origins": [],
+      "parquet_upload": {
+        "s3_key": "ipfs-20261026T032236Z/property_roof_age.parquet",
+        "filebase_cid": "QmajqKq9FMZxtbUwJPGAjyb5aGY9y5mm2pfiQh1B5EJzwy",
+        "pinning_status": "pinned",
+        "matches_local_root": false,
+        "note": "Plain uploads get Filebase's own UnixFS encoding (CIDv0 Qm...), not the CIDv1 of the CAR import; the CAR root is the artifact's identity"
+      },
+      "gateway_urls": {
+        "https://gateway.pinata.cloud": "https://gateway.pinata.cloud/ipfs/bafybeif2j5ixwnwerqdqwh4zr4xc3lzovz5gpefh6pmqfsl4kodyjf5jqm",
+        "https://dget.top": "https://dget.top/ipfs/bafybeif2j5ixwnwerqdqwh4zr4xc3lzovz5gpefh6pmqfsl4kodyjf5jqm",
+        "https://ipfs.io": "https://ipfs.io/ipfs/bafybeif2j5ixwnwerqdqwh4zr4xc3lzovz5gpefh6pmqfsl4kodyjf5jqm",
+        "https://dweb.link": "https://dweb.link/ipfs/bafybeif2j5ixwnwerqdqwh4zr4xc3lzovz5gpefh6pmqfsl4kodyjf5jqm"
+      }
+    },
+    {
+      "name": "roof_age_lineage",
+      "path": "roof_age_lineage.parquet",
+      "description": "NSI-based roof-age estimate lineage per property",
+      "cid": "bafybeicpigph4hkhqhaos6eznglbmfxe2p6bcyorkmsovzv77wkbu22fwy",
+      "cid_version": 1,
+      "codec": "file",
+      "multicodec": "dag-pb",
+      "size": 7092110,
+      "sha256": "fedbc34b4c7b038a83298c1526f443db538d66e1f5bc90a78a80b703acfa37ae",
+      "row_count": 395554,
+      "generated_at": "2026-10-26T03:22:36Z",
+      "car": {
+        "path": "roof_age_lineage.car",
+        "size": 7092839,
+        "sha256": "c9c9a1677e8ebf634dc183b3faaaf24be4c1b62f75ddba076ff9d64a79105a96",
+        "root_cid": "bafybeicpigph4hkhqhaos6eznglbmfxe2p6bcyorkmsovzv77wkbu22fwy",
+        "s3_key": "ipfs-20261026T032236Z/roof_age_lineage.car",
+        "filebase_cid": "bafybeicpigph4hkhqhaos6eznglbmfxe2p6bcyorkmsovzv77wkbu22fwy",
+        "filebase_pinning_status": "pinned",
+        "filebase_cid_matches_root": true
+      },
+      "origins": [],
+      "parquet_upload": {
+        "s3_key": "ipfs-20261026T032236Z/roof_age_lineage.parquet",
+        "filebase_cid": "Qmc6UToUa8cV7UwMywbjAivYdFBVhLqCXZqvZUqxZyNZKV",
+        "pinning_status": "pinned",
+        "matches_local_root": false,
+        "note": "Plain uploads get Filebase's own UnixFS encoding (CIDv0 Qm...), not the CIDv1 of the CAR import; the CAR root is the artifact's identity"
+      },
+      "gateway_urls": {
+        "https://gateway.pinata.cloud": "https://gateway.pinata.cloud/ipfs/bafybeicpigph4hkhqhaos6eznglbmfxe2p6bcyorkmsovzv77wkbu22fwy",
+        "https://dget.top": "https://dget.top/ipfs/bafybeicpigph4hkhqhaos6eznglbmfxe2p6bcyorkmsovzv77wkbu22fwy",
+        "https://ipfs.io": "https://ipfs.io/ipfs/bafybeicpigph4hkhqhaos6eznglbmfxe2p6bcyorkmsovzv77wkbu22fwy",
+        "https://dweb.link": "https://dweb.link/ipfs/bafybeicpigph4hkhqhaos6eznglbmfxe2p6bcyorkmsovzv77wkbu22fwy"
+      }
+    },
+    {
+      "name": "ownership_signals",
+      "path": "ownership_signals.parquet",
+      "description": "Ownership-change signals from the 2021-2025 rolls (owner and deed deltas)",
+      "cid": "bafybeic7nns2d5b27chavdvuj4p4e5mhdmfdht6l3jik5ddf5mh37qqkpy",
+      "cid_version": 1,
+      "codec": "file",
+      "multicodec": "dag-pb",
+      "size": 7347402,
+      "sha256": "4e7752a6393ed6353a3a6cdb58e11c365891263c8ec414c8bf1c3d9f1675c92b",
+      "row_count": 450299,
+      "generated_at": "2026-10-26T03:22:36Z",
+      "car": {
+        "path": "ownership_signals.car",
+        "size": 7348217,
+        "sha256": "5d15ba0289dd4356de99f109321cd0f3f6bc19717aa217a19d3d79a82877ca80",
+        "root_cid": "bafybeic7nns2d5b27chavdvuj4p4e5mhdmfdht6l3jik5ddf5mh37qqkpy",
+        "s3_key": "ipfs-20261026T032236Z/ownership_signals.car",
+        "filebase_cid": "bafybeic7nns2d5b27chavdvuj4p4e5mhdmfdht6l3jik5ddf5mh37qqkpy",
+        "filebase_pinning_status": "pinned",
+        "filebase_cid_matches_root": true
+      },
+      "origins": [],
+      "parquet_upload": {
+        "s3_key": "ipfs-20261026T032236Z/ownership_signals.parquet",
+        "filebase_cid": "QmWjdMc9f1ejjR4GXhw3FJKqT9fKkPB3m22uqmZc1aBCq5",
+        "pinning_status": "pinned",
+        "matches_local_root": false,
+        "note": "Plain uploads get Filebase's own UnixFS encoding (CIDv0 Qm...), not the CIDv1 of the CAR import; the CAR root is the artifact's identity"
+      },
+      "gateway_urls": {
+        "https://gateway.pinata.cloud": "https://gateway.pinata.cloud/ipfs/bafybeic7nns2d5b27chavdvuj4p4e5mhdmfdht6l3jik5ddf5mh37qqkpy",
+        "https://dget.top": "https://dget.top/ipfs/bafybeic7nns2d5b27chavdvuj4p4e5mhdmfdht6l3jik5ddf5mh37qqkpy",
+        "https://ipfs.io": "https://ipfs.io/ipfs/bafybeic7nns2d5b27chavdvuj4p4e5mhdmfdht6l3jik5ddf5mh37qqkpy",
+        "https://dweb.link": "https://dweb.link/ipfs/bafybeic7nns2d5b27chavdvuj4p4e5mhdmfdht6l3jik5ddf5mh37qqkpy"
+      }
+    },
+    {
+      "name": "etrakit_permit_facts",
+      "path": "etrakit_permit_facts.parquet",
+      "description": "Derived permit facts: roofing class/basis/confidence, open/closed, years open, expiration",
+      "cid": "bafkreia4lkjwvg3yryug4f2beetf46rynrholzhhmj255ouhxuvq2qybbi",
+      "cid_version": 1,
+      "codec": "file",
+      "multicodec": "raw",
+      "size": 24115,
+      "sha256": "1c5a936a9b788e286e174121265e7a386c4ee5e4e76275deba87bd2b0d43010a",
+      "row_count": 490,
+      "generated_at": "2026-10-26T03:22:36Z",
+      "car": {
+        "path": "etrakit_permit_facts.car",
+        "size": 24213,
+        "sha256": "99bc86ab54149137cad779bc4ebd6f36de658bd4bf063147ecd760717b96abee",
+        "root_cid": "bafkreia4lkjwvg3yryug4f2beetf46rynrholzhhmj255ouhxuvq2qybbi",
+        "s3_key": "ipfs-20261026T032236Z/etrakit_permit_facts.car",
+        "filebase_cid": "bafkreia4lkjwvg3yryug4f2beetf46rynrholzhhmj255ouhxuvq2qybbi",
+        "filebase_pinning_status": "pinned",
+        "filebase_cid_matches_root": true
+      },
+      "origins": [],
+      "parquet_upload": {
+        "s3_key": "ipfs-20261026T032236Z/etrakit_permit_facts.parquet",
+        "filebase_cid": "QmRxaXgLTxVmSiujCYhv9P1qy5TkSQzmuWb1SuNjT5EQY4",
+        "pinning_status": "pinned",
+        "matches_local_root": false,
+        "note": "Plain uploads get Filebase's own UnixFS encoding (CIDv0 Qm...), not the CIDv1 of the CAR import; the CAR root is the artifact's identity"
+      },
+      "gateway_urls": {
+        "https://gateway.pinata.cloud": "https://gateway.pinata.cloud/ipfs/bafkreia4lkjwvg3yryug4f2beetf46rynrholzhhmj255ouhxuvq2qybbi",
+        "https://dget.top": "https://dget.top/ipfs/bafkreia4lkjwvg3yryug4f2beetf46rynrholzhhmj255ouhxuvq2qybbi",
+        "https://ipfs.io": "https://ipfs.io/ipfs/bafkreia4lkjwvg3yryug4f2beetf46rynrholzhhmj255ouhxuvq2qybbi",
+        "https://dweb.link": "https://dweb.link/ipfs/bafkreia4lkjwvg3yryug4f2beetf46rynrholzhhmj255ouhxuvq2qybbi"
+      }
+    },
+    {
+      "name": "etrakit_permit_property_link",
+      "path": "etrakit_permit_property_link.parquet",
+      "description": "Permit to property links by section-block-lot",
+      "cid": "bafkreid3h7ze6orsoaloshagn4vsm5y6bfqoqhkb37pap7telumzdfllju",
+      "cid_version": 1,
+      "codec": "file",
+      "multicodec": "raw",
+      "size": 4809,
+      "sha256": "7b3ff24f3a327016e91c066f2b26771e0960e81d41dfde07fe645d1991956b4d",
+      "row_count": 443,
+      "generated_at": "2026-10-26T03:22:36Z",
+      "car": {
+        "path": "etrakit_permit_property_link.car",
+        "size": 4906,
+        "sha256": "5b049fd44c2db9a3c7af0becde38393110ff6899761f424b310b3bb4dc12af59",
+        "root_cid": "bafkreid3h7ze6orsoaloshagn4vsm5y6bfqoqhkb37pap7telumzdfllju",
+        "s3_key": "ipfs-20261026T032236Z/etrakit_permit_property_link.car",
+        "filebase_cid": "bafkreid3h7ze6orsoaloshagn4vsm5y6bfqoqhkb37pap7telumzdfllju",
+        "filebase_pinning_status": "pinned",
+        "filebase_cid_matches_root": true
+      },
+      "origins": [],
+      "parquet_upload": {
+        "s3_key": "ipfs-20261026T032236Z/etrakit_permit_property_link.parquet",
+        "filebase_cid": "QmQ2keztp6fZkTJFgkX8WGoedo1hH1g6irnHc17LB9BfUK",
+        "pinning_status": "pinned",
+        "matches_local_root": false,
+        "note": "Plain uploads get Filebase's own UnixFS encoding (CIDv0 Qm...), not the CIDv1 of the CAR import; the CAR root is the artifact's identity"
+      },
+      "gateway_urls": {
+        "https://gateway.pinata.cloud": "https://gateway.pinata.cloud/ipfs/bafkreid3h7ze6orsoaloshagn4vsm5y6bfqoqhkb37pap7telumzdfllju",
+        "https://dget.top": "https://dget.top/ipfs/bafkreid3h7ze6orsoaloshagn4vsm5y6bfqoqhkb37pap7telumzdfllju",
+        "https://ipfs.io": "https://ipfs.io/ipfs/bafkreid3h7ze6orsoaloshagn4vsm5y6bfqoqhkb37pap7telumzdfllju",
+        "https://dweb.link": "https://dweb.link/ipfs/bafkreid3h7ze6orsoaloshagn4vsm5y6bfqoqhkb37pap7telumzdfllju"
+      }
+    },
+    {
+      "name": "overture_places",
+      "path": "overture_places.parquet",
+      "description": "Overture Maps places extract for Nassau (businesses/POIs)",
+      "cid": "bafybeiaqwo4fjwjmqe7rwpq3dr5ufmauhxfdpfptw2xwy7svmv7ful5fuu",
+      "cid_version": 1,
+      "codec": "file",
+      "multicodec": "dag-pb",
+      "size": 8486457,
+      "sha256": "62b5fadb54d0026c84298b3a665c8cbe7e47f264e11a309fdc0556c445f9c70f",
+      "row_count": 78054,
+      "generated_at": "2026-10-26T03:22:36Z",
+      "car": {
+        "path": "overture_places.car",
+        "size": 8487364,
+        "sha256": "331046e0ea1a8944232202ffd8073999676b3c72e4a6c1c8e856337a6a3d1a67",
+        "root_cid": "bafybeiaqwo4fjwjmqe7rwpq3dr5ufmauhxfdpfptw2xwy7svmv7ful5fuu",
+        "s3_key": "ipfs-20261026T032236Z/overture_places.car",
+        "filebase_cid": "bafybeiaqwo4fjwjmqe7rwpq3dr5ufmauhxfdpfptw2xwy7svmv7ful5fuu",
+        "filebase_pinning_status": "pinned",
+        "filebase_cid_matches_root": true
+      },
+      "origins": [],
+      "parquet_upload": {
+        "s3_key": "ipfs-20261026T032236Z/overture_places.parquet",
+        "filebase_cid": "QmPFKNwQrcqe54wFjv8jXwvneRZhCz6PFpRQT7kKZvNk4L",
+        "pinning_status": "pinned",
+        "matches_local_root": false,
+        "note": "Plain uploads get Filebase's own UnixFS encoding (CIDv0 Qm...), not the CIDv1 of the CAR import; the CAR root is the artifact's identity"
+      },
+      "gateway_urls": {
+        "https://gateway.pinata.cloud": "https://gateway.pinata.cloud/ipfs/bafybeiaqwo4fjwjmqe7rwpq3dr5ufmauhxfdpfptw2xwy7svmv7ful5fuu",
+        "https://dget.top": "https://dget.top/ipfs/bafybeiaqwo4fjwjmqe7rwpq3dr5ufmauhxfdpfptw2xwy7svmv7ful5fuu",
+        "https://ipfs.io": "https://ipfs.io/ipfs/bafybeiaqwo4fjwjmqe7rwpq3dr5ufmauhxfdpfptw2xwy7svmv7ful5fuu",
+        "https://dweb.link": "https://dweb.link/ipfs/bafybeiaqwo4fjwjmqe7rwpq3dr5ufmauhxfdpfptw2xwy7svmv7ful5fuu"
+      }
+    },
+    {
+      "name": "corporations",
+      "path": "corporations.parquet",
+      "description": "NYS active corporations with a Nassau address (data.ny.gov n9v6-gdp6)",
+      "cid": "bafybeibzexu7cbxzqmzpj45xpqoo6pknz5xflj2nnqiacdzjkuvoom5xpm",
+      "cid_version": 1,
+      "codec": "file",
+      "multicodec": "dag-pb",
+      "size": 28086054,
+      "sha256": "2f90730a4f6eb2db66a14cce935fc6e90ca20ddd77be61154f6ee7671bc98347",
+      "row_count": 409304,
+      "generated_at": "2026-10-26T03:22:36Z",
+      "car": {
+        "path": "corporations.car",
+        "size": 28088563,
+        "sha256": "f1cf44e3d5abe8899f5d9413a782ab79eab9c2f669b4b962d0c0927b6b013f45",
+        "root_cid": "bafybeibzexu7cbxzqmzpj45xpqoo6pknz5xflj2nnqiacdzjkuvoom5xpm",
+        "s3_key": "ipfs-20261026T032236Z/corporations.car",
+        "filebase_cid": "bafybeibzexu7cbxzqmzpj45xpqoo6pknz5xflj2nnqiacdzjkuvoom5xpm",
+        "filebase_pinning_status": "pinned",
+        "filebase_cid_matches_root": true
+      },
+      "origins": [],
+      "parquet_upload": {
+        "s3_key": "ipfs-20261026T032236Z/corporations.parquet",
+        "filebase_cid": "QmQE3kZSrQTPDKgZpjiaaFEbtn2RVBHmPVXDzsKhWAPuYS",
+        "pinning_status": "pinned",
+        "matches_local_root": false,
+        "note": "Plain uploads get Filebase's own UnixFS encoding (CIDv0 Qm...), not the CIDv1 of the CAR import; the CAR root is the artifact's identity"
+      },
+      "gateway_urls": {
+        "https://gateway.pinata.cloud": "https://gateway.pinata.cloud/ipfs/bafybeibzexu7cbxzqmzpj45xpqoo6pknz5xflj2nnqiacdzjkuvoom5xpm",
+        "https://dget.top": "https://dget.top/ipfs/bafybeibzexu7cbxzqmzpj45xpqoo6pknz5xflj2nnqiacdzjkuvoom5xpm",
+        "https://ipfs.io": "https://ipfs.io/ipfs/bafybeibzexu7cbxzqmzpj45xpqoo6pknz5xflj2nnqiacdzjkuvoom5xpm",
+        "https://dweb.link": "https://dweb.link/ipfs/bafybeibzexu7cbxzqmzpj45xpqoo6pknz5xflj2nnqiacdzjkuvoom5xpm"
+      }
+    },
+    {
+      "name": "pipeline_runs",
+      "path": "pipeline_runs.parquet",
+      "description": "Pipeline run history: sources, counts, deltas, limitations",
+      "cid": "bafkreiehxaagcvmehr5m22ryqxp4ffh6p23vc5ryuaapw3jhkyw3feybim",
+      "cid_version": 1,
+      "codec": "file",
+      "multicodec": "raw",
+      "size": 14087,
+      "sha256": "87b8006155843c7acd6a3885dfc294fe7eb7517638a000fb6d27562db2930143",
+      "row_count": 12,
+      "generated_at": "2026-10-26T03:22:36Z",
+      "car": {
+        "path": "pipeline_runs.car",
+        "size": 14184,
+        "sha256": "f0a212d2eb3ea1f1b7eb15b5f1d907e05c6b1a0ccf65301bce0a9c00cce110ae",
+        "root_cid": "bafkreiehxaagcvmehr5m22ryqxp4ffh6p23vc5ryuaapw3jhkyw3feybim",
+        "s3_key": "ipfs-20261026T032236Z/pipeline_runs.car",
+        "filebase_cid": "bafkreiehxaagcvmehr5m22ryqxp4ffh6p23vc5ryuaapw3jhkyw3feybim",
+        "filebase_pinning_status": "pinned",
+        "filebase_cid_matches_root": true
+      },
+      "origins": [],
+      "parquet_upload": {
+        "s3_key": "ipfs-20261026T032236Z/pipeline_runs.parquet",
+        "filebase_cid": "QmVRa7GAKYii1qoZhyn7BboeaaqBeay4RxRyc5wM7pM73N",
+        "pinning_status": "pinned",
+        "matches_local_root": false,
+        "note": "Plain uploads get Filebase's own UnixFS encoding (CIDv0 Qm...), not the CIDv1 of the CAR import; the CAR root is the artifact's identity"
+      },
+      "gateway_urls": {
+        "https://gateway.pinata.cloud": "https://gateway.pinata.cloud/ipfs/bafkreiehxaagcvmehr5m22ryqxp4ffh6p23vc5ryuaapw3jhkyw3feybim",
+        "https://dget.top": "https://dget.top/ipfs/bafkreiehxaagcvmehr5m22ryqxp4ffh6p23vc5ryuaapw3jhkyw3feybim",
+        "https://ipfs.io": "https://ipfs.io/ipfs/bafkreiehxaagcvmehr5m22ryqxp4ffh6p23vc5ryuaapw3jhkyw3feybim",
+        "https://dweb.link": "https://dweb.link/ipfs/bafkreiehxaagcvmehr5m22ryqxp4ffh6p23vc5ryuaapw3jhkyw3feybim"
+      }
+    }
+  ]
+}
